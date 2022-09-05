@@ -12,7 +12,19 @@
   </head>
 
   <body>
-    <main class="container mx-auto mt-28 px-5 flex">
+     <nav class="w-full h-10 bg-gray-700 flex p-2 text-white justify-between">
+        <h1 class="font-extrabold">Bull&Bear</h1>
+        <ul class="flex w-[30rem] justify-between">
+          <li>Home</li>
+          <li>Portfolio</li>
+          <li>Transactions</li>
+        </ul>
+        
+     </nav>
+      <p class="notice"><%= notice %></p> 
+      <p class="alert"><%= alert %></p> 
+
+    <main class="container mx-auto mt-28 px-5">
       <%= yield %>
     </main>
   </body>
