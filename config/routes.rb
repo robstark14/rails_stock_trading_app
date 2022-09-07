@@ -8,8 +8,16 @@ Rails.application.routes.draw do
   end
    
   resources :users 
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  resources :balance, only: [:show] do
+    member do
+      get 'deposit'
+      get 'withdraw'
+      patch 'confirm_deposit'
+      patch 'confirm_withdrawal'
+    end
+  end
+  resources :pending_requests
+  resources :declined_requests
+
 end

@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 
   # GET /users or /users.json
   def index
-    @users = User.all
+    @users = User.where(role: "trader")
   end
 
   # GET /users/1 or /users/1.json
@@ -72,5 +72,13 @@ class UsersController < ApplicationController
     def user_params
       # params.fetch(:user, {})
       params.require(:user).permit(:email, :password, :password_confirmation)
+    end
+
+    def verify_is_admin
+      if current_user.admin?
+         return
+      else
+         redirect_to root_path, notice: "You must be an admin to perform this action."
+      end
     end
 end

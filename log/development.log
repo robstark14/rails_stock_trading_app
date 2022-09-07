@@ -13471,3 +13471,2321 @@ Migrating to AddBalanceToUser (20220907121256)
   [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(5853253310869891395)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/deposit" for 127.0.0.1 at 2022-09-07 21:17:08 +0800
+  
+SyntaxError (/home/rob/Documents/rails/rails_stock_trading_app/config/routes.rb:12: syntax error, unexpected [, expecting `do' or '{' or '('
+  resources :balance, only [:show] do
+                           ^
+/home/rob/Documents/rails/rails_stock_trading_app/config/routes.rb:12: syntax error, unexpected `do' for block, expecting `end'
+...urces :balance, only [:show] do
+...                             ^~
+/home/rob/Documents/rails/rails_stock_trading_app/config/routes.rb:20: syntax error, unexpected `end', expecting end-of-input):
+  
+config/routes.rb:12: syntax error, unexpected [, expecting `do' or '{' or '('
+config/routes.rb:12: syntax error, unexpected `do' for block, expecting `end'
+config/routes.rb:20: syntax error, unexpected `end', expecting end-of-input
+config/routes.rb:12: syntax error, unexpected [, expecting `do' or '{' or '('
+config/routes.rb:12: syntax error, unexpected `do' for block, expecting `end'
+config/routes.rb:20: syntax error, unexpected `end', expecting end-of-input
+config/routes.rb:12: syntax error, unexpected [, expecting `do' or '{' or '('
+config/routes.rb:12: syntax error, unexpected `do' for block, expecting `end'
+config/routes.rb:20: syntax error, unexpected `end', expecting end-of-input
+Started GET "/deposit" for 127.0.0.1 at 2022-09-07 21:18:20 +0800
+  
+SyntaxError (/home/rob/Documents/rails/rails_stock_trading_app/config/routes.rb:12: syntax error, unexpected [, expecting `do' or '{' or '('
+  resources :balance, only [:show] do
+                           ^
+/home/rob/Documents/rails/rails_stock_trading_app/config/routes.rb:12: syntax error, unexpected `do' for block, expecting `end'
+...urces :balance, only [:show] do
+...                             ^~
+/home/rob/Documents/rails/rails_stock_trading_app/config/routes.rb:19: syntax error, unexpected `end', expecting end-of-input
+  end
+  ^~~
+):
+  
+config/routes.rb:12: syntax error, unexpected [, expecting `do' or '{' or '('
+config/routes.rb:12: syntax error, unexpected `do' for block, expecting `end'
+config/routes.rb:19: syntax error, unexpected `end', expecting end-of-input
+config/routes.rb:12: syntax error, unexpected [, expecting `do' or '{' or '('
+config/routes.rb:12: syntax error, unexpected `do' for block, expecting `end'
+config/routes.rb:19: syntax error, unexpected `end', expecting end-of-input
+config/routes.rb:12: syntax error, unexpected [, expecting `do' or '{' or '('
+config/routes.rb:12: syntax error, unexpected `do' for block, expecting `end'
+config/routes.rb:19: syntax error, unexpected `end', expecting end-of-input
+Started GET "/deposit" for 127.0.0.1 at 2022-09-07 21:18:38 +0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/deposit"):
+  
+Started GET "/deposit" for 127.0.0.1 at 2022-09-07 21:19:02 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/deposit"):
+  
+Started GET "/deposit" for 127.0.0.1 at 2022-09-07 21:20:11 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/deposit"):
+  
+Started GET "/balance/deposit" for 127.0.0.1 at 2022-09-07 21:20:44 +0800
+Processing by BalanceController#show as HTML
+  Parameters: {"id"=>"deposit"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:40:in `set_user'
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 5.9ms | Allocations: 12935)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStock Create (1.1ms)[0m  [1m[32mINSERT INTO "stocks" ("comp_name", "stock_symbol", "comp_description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["comp_name", "Abbvie Inc"], ["stock_symbol", "ABBV"], ["comp_description", "AbbVie's mission is to discover and deliver innovative medicines that solve serious health issues today and address the medical challenges of tomorrow. The Company strives to have a remarkable impact on people's lives across several key therapeutic areas: immunology, oncology, neuroscience, eye care, virology, women's health and gastroenterology, in addition to products and services across its Allergan Aesthetics portfolio."], ["created_at", "2022-09-07 13:23:46.850262"], ["updated_at", "2022-09-07 13:23:46.850262"]]
+  [1m[36mTRANSACTION (13.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStock Create (1.4ms)[0m  [1m[32mINSERT INTO "stocks" ("comp_name", "stock_symbol", "comp_description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["comp_name", "American Express Co."], ["stock_symbol", "AXP"], ["comp_description", "American Express is a globally integrated payments company, providing customers with access to products, insights and experiences that enrich lives and build business success."], ["created_at", "2022-09-07 13:23:49.141631"], ["updated_at", "2022-09-07 13:23:49.141631"]]
+  [1m[36mTRANSACTION (25.4ms)[0m  [1m[35mCOMMIT[0m
+  
+NoMethodError (undefined method `approved_trader' for #<BalanceController:0x000000000202d8>):
+  
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:199:in `block (2 levels) in halting'
+actionpack (7.0.3.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:200:in `block in halting'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:116:in `block in run_callbacks'
+actiontext (7.0.3.1) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.3.1) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.3.1) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.3.1) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.3.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.3.1) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.3.1) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.3.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.3.1) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.3.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/cookies.rb:697:in `call'
+activerecord (7.0.3.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.3.1) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `block in tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:38:in `tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `tagged'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.3.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/balance" for 127.0.0.1 at 2022-09-07 21:27:47 +0800
+Started GET "/deposit" for 127.0.0.1 at 2022-09-07 21:27:47 +0800
+Started GET "/" for 127.0.0.1 at 2022-09-07 21:27:47 +0800
+Started GET "/" for 127.0.0.1 at 2022-09-07 21:27:47 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/balance"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/deposit"):
+  
+Processing by StocksController#index as HTML
+Processing by StocksController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stocks/index.html.erb within layouts/application
+  Rendering layout layouts/application.html.erb
+  Rendering stocks/index.html.erb within layouts/application
+  [1m[36mStock Load (2.6ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/stocks/index.html.erb:28:in `each_with_index'
+  [1m[36mStock Load (2.2ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/stocks/index.html.erb:28:in `each_with_index'
+  Rendered stocks/index.html.erb within layouts/application (Duration: 74664.3ms | Allocations: 200501)
+  Rendered layout layouts/application.html.erb (Duration: 74789.0ms | Allocations: 229054)
+Completed 500 Internal Server Error in 75764ms (ActiveRecord: 29.0ms | Allocations: 276935)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user_signed_in' for #<ActionView::Base:0x00000000020d50>
+Did you mean?  user_signed_in?):
+    14:   <body>
+    15:      <nav class="w-full h-10 bg-gray-700 flex p-2 text-white justify-between">
+    16:         <h1 class="font-extrabold">Bull&Bear</h1>
+    17:         <% if user_signed_in %>
+    18:         <ul class="flex w-[30rem] justify-between">
+    19:           <li>Home</li>
+    20:           <li>Portfolio</li>
+  
+app/views/layouts/application.html.erb:17
+  Rendered stocks/index.html.erb within layouts/application (Duration: 75039.6ms | Allocations: 339201)
+  Rendered layout layouts/application.html.erb (Duration: 75080.5ms | Allocations: 359212)
+Completed 500 Internal Server Error in 76072ms (ActiveRecord: 30.0ms | Allocations: 421701)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user_signed_in' for #<ActionView::Base:0x00000000020da0>
+Did you mean?  user_signed_in?):
+    14:   <body>
+    15:      <nav class="w-full h-10 bg-gray-700 flex p-2 text-white justify-between">
+    16:         <h1 class="font-extrabold">Bull&Bear</h1>
+    17:         <% if user_signed_in %>
+    18:         <ul class="flex w-[30rem] justify-between">
+    19:           <li>Home</li>
+    20:           <li>Portfolio</li>
+  
+app/views/layouts/application.html.erb:17
+Started GET "/" for 127.0.0.1 at 2022-09-07 21:29:23 +0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StocksController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stocks/index.html.erb within layouts/application
+  [1m[36mStock Load (2.6ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/stocks/index.html.erb:28:in `each_with_index'
+  Rendered stocks/index.html.erb within layouts/application (Duration: 79862.2ms | Allocations: 102250)
+  Rendered layout layouts/application.html.erb (Duration: 80088.7ms | Allocations: 170003)
+Completed 500 Internal Server Error in 81179ms (ActiveRecord: 19.8ms | Allocations: 193758)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user_signed_in' for #<ActionView::Base:0x0000000000e240>
+Did you mean?  user_signed_in?):
+    14:   <body>
+    15:      <nav class="w-full h-10 bg-gray-700 flex p-2 text-white justify-between">
+    16:         <h1 class="font-extrabold">Bull&Bear</h1>
+    17:         <% if user_signed_in %>
+    18:         <ul class="flex w-[30rem] justify-between">
+    19:           <li>Home</li>
+    20:           <li>Portfolio</li>
+  
+app/views/layouts/application.html.erb:17
+Started GET "/" for 127.0.0.1 at 2022-09-07 21:32:49 +0800
+Processing by StocksController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stocks/index.html.erb within layouts/application
+  [1m[36mStock Load (3.1ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/stocks/index.html.erb:28:in `each_with_index'
+  Rendered stocks/index.html.erb within layouts/application (Duration: 79644.3ms | Allocations: 97961)
+  Rendered layout layouts/application.html.erb (Duration: 79719.8ms | Allocations: 109074)
+Completed 500 Internal Server Error in 80770ms (ActiveRecord: 3.8ms | Allocations: 111910)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user_signed_in' for #<ActionView::Base:0x0000000000e560>
+Did you mean?  user_signed_in?):
+    14:   <body>
+    15:      <nav class="w-full h-10 bg-gray-700 flex p-2 text-white justify-between">
+    16:         <h1 class="font-extrabold">Bull&Bear</h1>
+    17:         <% if user_signed_in %>
+    18:         <ul class="flex w-[30rem] justify-between">
+    19:           <li>Home</li>
+    20:           <li>Portfolio</li>
+  
+app/views/layouts/application.html.erb:17
+Started GET "/" for 127.0.0.1 at 2022-09-07 21:39:26 +0800
+Processing by StocksController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stocks/index.html.erb within layouts/application
+  [1m[36mStock Load (0.9ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/stocks/index.html.erb:28:in `each_with_index'
+  Rendered stocks/index.html.erb within layouts/application (Duration: 80201.5ms | Allocations: 98499)
+  Rendered layout layouts/application.html.erb (Duration: 80235.4ms | Allocations: 105840)
+Completed 200 OK in 81159ms (Views: 80236.2ms | ActiveRecord: 9.7ms | Allocations: 112570)
+
+
+Started GET "/balance/18" for 127.0.0.1 at 2022-09-07 21:41:02 +0800
+Processing by BalanceController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:40:in `set_user'
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.5ms | Allocations: 4246)
+
+
+  
+NoMethodError (undefined method `approved_trader' for #<BalanceController:0x0000000000e998>):
+  
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:199:in `block (2 levels) in halting'
+actionpack (7.0.3.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:200:in `block in halting'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:116:in `block in run_callbacks'
+actiontext (7.0.3.1) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.3.1) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.3.1) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.3.1) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.3.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.3.1) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.3.1) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.3.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.3.1) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.3.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/cookies.rb:697:in `call'
+activerecord (7.0.3.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.3.1) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `block in tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:38:in `tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `tagged'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.3.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2022-09-07 21:41:10 +0800
+Processing by StocksController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stocks/index.html.erb within layouts/application
+  [1m[36mStock Load (3.0ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/stocks/index.html.erb:28:in `each_with_index'
+  Rendered stocks/index.html.erb within layouts/application (Duration: 78421.4ms | Allocations: 97952)
+  Rendered layout layouts/application.html.erb (Duration: 78455.0ms | Allocations: 104732)
+Completed 200 OK in 79398ms (Views: 78454.1ms | ActiveRecord: 3.5ms | Allocations: 107586)
+
+
+Started GET "/balance/18" for 127.0.0.1 at 2022-09-07 21:43:47 +0800
+Processing by BalanceController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:40:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering balance/show.html.erb within layouts/application
+  Rendered balance/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 250)
+  Rendered layout layouts/application.html.erb (Duration: 24.5ms | Allocations: 20791)
+Completed 200 OK in 49ms (Views: 26.2ms | ActiveRecord: 6.8ms | Allocations: 29661)
+
+
+Started GET "/balance/18/deposit" for 127.0.0.1 at 2022-09-07 21:43:49 +0800
+Processing by BalanceController#deposit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:40:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering balance/deposit.html.erb within layouts/application
+  Rendered balance/deposit.html.erb within layouts/application (Duration: 84.3ms | Allocations: 3426)
+  Rendered layout layouts/application.html.erb (Duration: 121.1ms | Allocations: 10121)
+Completed 200 OK in 148ms (Views: 123.7ms | ActiveRecord: 3.9ms | Allocations: 11428)
+
+
+Started PATCH "/balance/18/confirm_deposit" for 127.0.0.1 at 2022-09-07 21:44:02 +0800
+Processing by BalanceController#confirm_deposit as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"balance"=>"50"}, "commit"=>"deposit", "id"=>"18"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:40:in `set_user'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/balance_controller.rb:16:in `confirm_deposit'
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "robellempajarin@gmail.com"], ["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:16:in `confirm_deposit'
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "balance" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2022-09-07 13:44:02.438359"], ["balance", "50.0"], ["id", 18]]
+  ↳ app/controllers/balance_controller.rb:16:in `confirm_deposit'
+  [1m[36mTRANSACTION (19.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/balance_controller.rb:16:in `confirm_deposit'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 36ms (ActiveRecord: 21.8ms | Allocations: 5430)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-07 21:44:02 +0800
+Processing by StocksController#index as TURBO_STREAM
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stocks/index.html.erb within layouts/application
+  [1m[36mStock Load (2.9ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/stocks/index.html.erb:28:in `each_with_index'
+  Rendered stocks/index.html.erb within layouts/application (Duration: 82514.1ms | Allocations: 99534)
+  Rendered layout layouts/application.html.erb (Duration: 82582.2ms | Allocations: 106404)
+Completed 200 OK in 83560ms (Views: 82571.7ms | ActiveRecord: 18.8ms | Allocations: 110240)
+
+
+  [1m[36mStock Load (1.2ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  [1m[36mStock Load (0.5ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStock Destroy (0.5ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 2]]
+  [1m[36mTRANSACTION (10.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStock Destroy (0.4ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 3]]
+  [1m[36mTRANSACTION (9.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStock Destroy (0.3ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 4]]
+  [1m[36mTRANSACTION (8.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStock Destroy (0.3ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 5]]
+  [1m[36mTRANSACTION (9.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStock Destroy (0.4ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 6]]
+  [1m[36mTRANSACTION (9.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStock Destroy (0.4ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 7]]
+  [1m[36mTRANSACTION (9.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStock Destroy (0.4ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 8]]
+  [1m[36mTRANSACTION (9.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStock Destroy (0.4ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 9]]
+  [1m[36mTRANSACTION (9.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStock Destroy (0.4ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 10]]
+  [1m[36mTRANSACTION (9.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStock Destroy (0.5ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 11]]
+  [1m[36mTRANSACTION (8.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStock Destroy (0.4ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 12]]
+  [1m[36mTRANSACTION (9.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStock Destroy (0.4ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 13]]
+  [1m[36mTRANSACTION (9.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStock Destroy (0.4ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 14]]
+  [1m[36mTRANSACTION (9.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStock Destroy (0.4ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 15]]
+  [1m[36mTRANSACTION (9.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStock Destroy (0.4ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 16]]
+  [1m[36mTRANSACTION (9.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStock Destroy (0.4ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 17]]
+  [1m[36mTRANSACTION (9.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStock Destroy (0.4ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 18]]
+  [1m[36mTRANSACTION (8.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStock Destroy (0.4ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 19]]
+  [1m[36mTRANSACTION (9.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStock Destroy (0.5ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 20]]
+  [1m[36mTRANSACTION (9.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStock Destroy (0.4ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 21]]
+  [1m[36mTRANSACTION (9.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStock Destroy (0.3ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 22]]
+  [1m[36mTRANSACTION (8.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStock Destroy (0.4ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 23]]
+  [1m[36mTRANSACTION (9.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStock Destroy (0.4ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 24]]
+  [1m[36mTRANSACTION (9.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStock Destroy (0.3ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 25]]
+  [1m[36mTRANSACTION (9.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStock Destroy (0.4ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 26]]
+  [1m[36mTRANSACTION (9.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStock Destroy (0.3ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 27]]
+  [1m[36mTRANSACTION (9.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStock Destroy (0.5ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 28]]
+  [1m[36mTRANSACTION (9.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStock Destroy (0.4ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 29]]
+  [1m[36mTRANSACTION (9.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStock Destroy (0.4ms)[0m  [1m[31mDELETE FROM "stocks" WHERE "stocks"."id" = $1[0m  [["id", 30]]
+  [1m[36mTRANSACTION (9.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStock Create (0.6ms)[0m  [1m[32mINSERT INTO "stocks" ("comp_name", "stock_symbol", "comp_description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["comp_name", "Abbvie Inc"], ["stock_symbol", "ABBV"], ["comp_description", "AbbVie's mission is to discover and deliver innovative medicines that solve serious health issues today and address the medical challenges of tomorrow. The Company strives to have a remarkable impact on people's lives across several key therapeutic areas: immunology, oncology, neuroscience, eye care, virology, women's health and gastroenterology, in addition to products and services across its Allergan Aesthetics portfolio."], ["created_at", "2022-09-07 13:48:23.880611"], ["updated_at", "2022-09-07 13:48:23.880611"]]
+  [1m[36mTRANSACTION (17.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStock Create (1.5ms)[0m  [1m[32mINSERT INTO "stocks" ("comp_name", "stock_symbol", "comp_description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["comp_name", "American Express Co."], ["stock_symbol", "AXP"], ["comp_description", "American Express is a globally integrated payments company, providing customers with access to products, insights and experiences that enrich lives and build business success."], ["created_at", "2022-09-07 13:48:25.616259"], ["updated_at", "2022-09-07 13:48:25.616259"]]
+  [1m[36mTRANSACTION (15.7ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 127.0.0.1 at 2022-09-07 21:48:30 +0800
+Processing by StocksController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stocks/index.html.erb within layouts/application
+  [1m[36mStock Load (2.1ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/stocks/index.html.erb:28:in `each_with_index'
+  Rendered stocks/index.html.erb within layouts/application (Duration: 5642.5ms | Allocations: 7291)
+  Rendered layout layouts/application.html.erb (Duration: 5681.2ms | Allocations: 13983)
+Completed 200 OK in 6559ms (Views: 5682.0ms | ActiveRecord: 2.3ms | Allocations: 16849)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-07 21:49:29 +0800
+Processing by StocksController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stocks/index.html.erb within layouts/application
+  [1m[36mStock Load (2.1ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/stocks/index.html.erb:28:in `each_with_index'
+  Rendered stocks/index.html.erb within layouts/application (Duration: 5548.1ms | Allocations: 7832)
+  Rendered layout layouts/application.html.erb (Duration: 5564.0ms | Allocations: 15048)
+Completed 200 OK in 6471ms (Views: 5570.3ms | ActiveRecord: 2.8ms | Allocations: 18640)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-07 21:51:07 +0800
+Processing by StocksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stocks/index.html.erb within layouts/application
+  [1m[36mStock Load (1.9ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/stocks/index.html.erb:28:in `each_with_index'
+  Rendered stocks/index.html.erb within layouts/application (Duration: 7131.3ms | Allocations: 7285)
+  Rendered layout layouts/application.html.erb (Duration: 7175.3ms | Allocations: 15752)
+Completed 200 OK in 8514ms (Views: 7175.7ms | ActiveRecord: 2.3ms | Allocations: 18601)
+
+
+Started GET "/balance/18" for 127.0.0.1 at 2022-09-07 21:51:26 +0800
+Processing by BalanceController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:40:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering balance/show.html.erb within layouts/application
+  Rendered balance/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 241)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 7098)
+Completed 200 OK in 22ms (Views: 17.1ms | ActiveRecord: 0.3ms | Allocations: 8905)
+
+
+Started GET "/balance/18/withdraw" for 127.0.0.1 at 2022-09-07 21:51:29 +0800
+Processing by BalanceController#withdraw as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:40:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering balance/withdraw.html.erb within layouts/application
+  Rendered balance/withdraw.html.erb within layouts/application (Duration: 36.5ms | Allocations: 4565)
+  Rendered layout layouts/application.html.erb (Duration: 36.8ms | Allocations: 4643)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 0.5ms | Allocations: 5918)
+
+
+  
+ActionView::Template::Error (undefined method `confirm_withdraw_balance_path' for #<ActionView::Base:0x00000000014f00>
+Did you mean?  confirm_withdrawal_balance_path
+               confirm_withdrawal_balance_url
+               confirm_deposit_balance_path):
+    1: <%= form_with scope: :user, url: confirm_withdraw_balance_path(@user), method: :patch do |form| %>
+    2:   <% if @user.errors.any? %>
+    3:     <% @user.errors.each do |error| %>
+    4: 
+  
+app/views/balance/withdraw.html.erb:1
+Started GET "/balance/18/withdraw" for 127.0.0.1 at 2022-09-07 21:52:28 +0800
+Processing by BalanceController#withdraw as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:40:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering balance/withdraw.html.erb within layouts/application
+  Rendered balance/withdraw.html.erb within layouts/application (Duration: 4.0ms | Allocations: 999)
+  Rendered layout layouts/application.html.erb (Duration: 18.9ms | Allocations: 8277)
+Completed 200 OK in 28ms (Views: 20.9ms | ActiveRecord: 0.3ms | Allocations: 10244)
+
+
+Started PATCH "/balance/18/confirm_withdrawal" for 127.0.0.1 at 2022-09-07 21:52:33 +0800
+Processing by BalanceController#confirm_withdrawal as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"balance"=>"25"}, "commit"=>"withdraw balance", "id"=>"18"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:40:in `set_user'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/balance_controller.rb:24:in `confirm_withdrawal'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "robellempajarin@gmail.com"], ["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:24:in `confirm_withdrawal'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/balance_controller.rb:24:in `confirm_withdrawal'
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 1.4ms | Allocations: 6441)
+
+
+  
+NameError (undefined local variable or method `portfolio_stocks_path' for #<BalanceController:0x000000000152c0>):
+  
+app/controllers/balance_controller.rb:26:in `confirm_withdrawal'
+Started GET "/balance/18/withdraw" for 127.0.0.1 at 2022-09-07 21:53:03 +0800
+Processing by BalanceController#withdraw as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:40:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering balance/withdraw.html.erb within layouts/application
+  Rendered balance/withdraw.html.erb within layouts/application (Duration: 3.8ms | Allocations: 669)
+  Rendered layout layouts/application.html.erb (Duration: 29.8ms | Allocations: 21281)
+Completed 200 OK in 53ms (Views: 31.4ms | ActiveRecord: 4.0ms | Allocations: 29908)
+
+
+Started PATCH "/balance/18/confirm_withdrawal" for 127.0.0.1 at 2022-09-07 21:53:15 +0800
+Processing by BalanceController#confirm_withdrawal as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"balance"=>"25"}, "commit"=>"withdraw balance", "id"=>"18"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:40:in `set_user'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/balance_controller.rb:24:in `confirm_withdrawal'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "robellempajarin@gmail.com"], ["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:24:in `confirm_withdrawal'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/balance_controller.rb:24:in `confirm_withdrawal'
+No template found for BalanceController#confirm_withdrawal, rendering head :no_content
+Completed 204 No Content in 14ms (ActiveRecord: 1.6ms | Allocations: 3967)
+
+
+Started PATCH "/balance/18/confirm_withdrawal" for 127.0.0.1 at 2022-09-07 21:53:17 +0800
+Processing by BalanceController#confirm_withdrawal as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"balance"=>"25"}, "commit"=>"withdraw balance", "id"=>"18"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:40:in `set_user'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/balance_controller.rb:24:in `confirm_withdrawal'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "robellempajarin@gmail.com"], ["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:24:in `confirm_withdrawal'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/balance_controller.rb:24:in `confirm_withdrawal'
+No template found for BalanceController#confirm_withdrawal, rendering head :no_content
+Completed 204 No Content in 13ms (ActiveRecord: 1.8ms | Allocations: 3177)
+
+
+Started PATCH "/balance/18/confirm_withdrawal" for 127.0.0.1 at 2022-09-07 21:53:19 +0800
+Processing by BalanceController#confirm_withdrawal as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"balance"=>"25"}, "commit"=>"withdraw balance", "id"=>"18"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:40:in `set_user'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/balance_controller.rb:24:in `confirm_withdrawal'
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "robellempajarin@gmail.com"], ["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:24:in `confirm_withdrawal'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/balance_controller.rb:24:in `confirm_withdrawal'
+No template found for BalanceController#confirm_withdrawal, rendering head :no_content
+Completed 204 No Content in 23ms (ActiveRecord: 2.6ms | Allocations: 3176)
+
+
+Started GET "/balance/18" for 127.0.0.1 at 2022-09-07 21:53:23 +0800
+Processing by BalanceController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:40:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering balance/show.html.erb within layouts/application
+  Rendered balance/show.html.erb within layouts/application (Duration: 3.6ms | Allocations: 222)
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 6915)
+Completed 200 OK in 28ms (Views: 16.9ms | ActiveRecord: 1.1ms | Allocations: 8206)
+
+
+Started GET "/balance/18/withdraw" for 127.0.0.1 at 2022-09-07 21:53:25 +0800
+Processing by BalanceController#withdraw as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:40:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering balance/withdraw.html.erb within layouts/application
+  Rendered balance/withdraw.html.erb within layouts/application (Duration: 1.3ms | Allocations: 598)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 7274)
+Completed 200 OK in 20ms (Views: 15.0ms | ActiveRecord: 0.4ms | Allocations: 8520)
+
+
+Started GET "/balance/18/withdraw" for 127.0.0.1 at 2022-09-07 21:54:01 +0800
+Processing by BalanceController#withdraw as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:40:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering balance/withdraw.html.erb within layouts/application
+  Rendered balance/withdraw.html.erb within layouts/application (Duration: 1.7ms | Allocations: 669)
+  Rendered layout layouts/application.html.erb (Duration: 23.7ms | Allocations: 21171)
+Completed 200 OK in 45ms (Views: 24.9ms | ActiveRecord: 4.0ms | Allocations: 29737)
+
+
+Started GET "/balance/18/withdraw" for 127.0.0.1 at 2022-09-07 21:54:03 +0800
+Processing by BalanceController#withdraw as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:40:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering balance/withdraw.html.erb within layouts/application
+  Rendered balance/withdraw.html.erb within layouts/application (Duration: 6.0ms | Allocations: 598)
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 7274)
+Completed 200 OK in 20ms (Views: 16.3ms | ActiveRecord: 0.3ms | Allocations: 8523)
+
+
+Started GET "/balance/18/withdraw" for 127.0.0.1 at 2022-09-07 21:54:51 +0800
+Processing by BalanceController#withdraw as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:40:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering balance/withdraw.html.erb within layouts/application
+  Rendered balance/withdraw.html.erb within layouts/application (Duration: 3.2ms | Allocations: 969)
+  Rendered layout layouts/application.html.erb (Duration: 17.4ms | Allocations: 8170)
+Completed 200 OK in 29ms (Views: 20.3ms | ActiveRecord: 0.6ms | Allocations: 10134)
+
+
+Started GET "/balance/18/withdraw" for 127.0.0.1 at 2022-09-07 21:55:05 +0800
+Processing by BalanceController#withdraw as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:40:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering balance/withdraw.html.erb within layouts/application
+  Rendered balance/withdraw.html.erb within layouts/application (Duration: 2.8ms | Allocations: 968)
+  Rendered layout layouts/application.html.erb (Duration: 21.7ms | Allocations: 9337)
+Completed 200 OK in 31ms (Views: 24.7ms | ActiveRecord: 0.5ms | Allocations: 11290)
+
+
+Started GET "/balance/18/withdraw" for 127.0.0.1 at 2022-09-07 21:55:15 +0800
+Processing by BalanceController#withdraw as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:40:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering balance/withdraw.html.erb within layouts/application
+  Rendered balance/withdraw.html.erb within layouts/application (Duration: 12.6ms | Allocations: 968)
+  Rendered layout layouts/application.html.erb (Duration: 27.1ms | Allocations: 8261)
+Completed 200 OK in 37ms (Views: 28.9ms | ActiveRecord: 0.4ms | Allocations: 10225)
+
+
+Started GET "/balance/18/withdraw" for 127.0.0.1 at 2022-09-07 21:55:16 +0800
+Processing by BalanceController#withdraw as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:40:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering balance/withdraw.html.erb within layouts/application
+  Rendered balance/withdraw.html.erb within layouts/application (Duration: 5.1ms | Allocations: 598)
+  Rendered layout layouts/application.html.erb (Duration: 25.9ms | Allocations: 7274)
+Completed 200 OK in 53ms (Views: 29.2ms | ActiveRecord: 1.3ms | Allocations: 8512)
+
+
+Started GET "/balance/18/withdraw" for 127.0.0.1 at 2022-09-07 21:55:16 +0800
+Processing by BalanceController#withdraw as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:40:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering balance/withdraw.html.erb within layouts/application
+  Rendered balance/withdraw.html.erb within layouts/application (Duration: 7.0ms | Allocations: 598)
+  Rendered layout layouts/application.html.erb (Duration: 54.9ms | Allocations: 7274)
+Completed 200 OK in 71ms (Views: 57.3ms | ActiveRecord: 1.1ms | Allocations: 8516)
+
+
+Started GET "/balance/18/withdraw" for 127.0.0.1 at 2022-09-07 21:55:16 +0800
+Processing by BalanceController#withdraw as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:40:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering balance/withdraw.html.erb within layouts/application
+  Rendered balance/withdraw.html.erb within layouts/application (Duration: 7.1ms | Allocations: 598)
+  Rendered layout layouts/application.html.erb (Duration: 48.5ms | Allocations: 7274)
+Completed 200 OK in 71ms (Views: 51.4ms | ActiveRecord: 1.6ms | Allocations: 8517)
+
+
+Started GET "/balance/18/withdraw" for 127.0.0.1 at 2022-09-07 21:55:49 +0800
+Processing by BalanceController#withdraw as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:40:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering balance/withdraw.html.erb within layouts/application
+  Rendered balance/withdraw.html.erb within layouts/application (Duration: 4.5ms | Allocations: 969)
+  Rendered layout layouts/application.html.erb (Duration: 21.0ms | Allocations: 8170)
+Completed 200 OK in 31ms (Views: 24.4ms | ActiveRecord: 0.4ms | Allocations: 10126)
+
+
+Started GET "/balance/18/withdraw" for 127.0.0.1 at 2022-09-07 21:56:15 +0800
+Processing by BalanceController#withdraw as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:40:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering balance/withdraw.html.erb within layouts/application
+  Rendered balance/withdraw.html.erb within layouts/application (Duration: 2.4ms | Allocations: 968)
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 8169)
+Completed 200 OK in 26ms (Views: 18.6ms | ActiveRecord: 0.4ms | Allocations: 10134)
+
+
+Started PATCH "/balance/18/confirm_withdrawal" for 127.0.0.1 at 2022-09-07 21:57:48 +0800
+Processing by BalanceController#confirm_withdrawal as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"balance"=>"25"}, "commit"=>"withdraw", "id"=>"18"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:40:in `set_user'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/balance_controller.rb:24:in `confirm_withdrawal'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "robellempajarin@gmail.com"], ["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:24:in `confirm_withdrawal'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/balance_controller.rb:24:in `confirm_withdrawal'
+Redirected to http://127.0.0.1:3000/stocks
+Completed 302 Found in 12ms (ActiveRecord: 1.4ms | Allocations: 3726)
+
+
+Started GET "/stocks" for 127.0.0.1 at 2022-09-07 21:57:48 +0800
+Processing by StocksController#index as TURBO_STREAM
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stocks/index.html.erb within layouts/application
+  [1m[36mStock Load (2.7ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/stocks/index.html.erb:28:in `each_with_index'
+  Rendered stocks/index.html.erb within layouts/application (Duration: 5579.9ms | Allocations: 9357)
+  Rendered layout layouts/application.html.erb (Duration: 5640.6ms | Allocations: 16218)
+Completed 200 OK in 6796ms (Views: 5629.1ms | ActiveRecord: 21.8ms | Allocations: 20194)
+
+
+Started GET "/balance/18" for 127.0.0.1 at 2022-09-07 21:58:49 +0800
+Processing by BalanceController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:40:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering balance/show.html.erb within layouts/application
+  Rendered balance/show.html.erb within layouts/application (Duration: 2.9ms | Allocations: 221)
+  Rendered layout layouts/application.html.erb (Duration: 23.8ms | Allocations: 6914)
+Completed 200 OK in 34ms (Views: 25.0ms | ActiveRecord: 0.7ms | Allocations: 8221)
+
+
+Started GET "/balance/18/deposit" for 127.0.0.1 at 2022-09-07 21:58:51 +0800
+Processing by BalanceController#deposit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:40:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering balance/deposit.html.erb within layouts/application
+  Rendered balance/deposit.html.erb within layouts/application (Duration: 6.6ms | Allocations: 922)
+  Rendered layout layouts/application.html.erb (Duration: 24.4ms | Allocations: 7607)
+Completed 200 OK in 52ms (Views: 25.9ms | ActiveRecord: 1.7ms | Allocations: 8912)
+
+
+Started PATCH "/balance/18/confirm_deposit" for 127.0.0.1 at 2022-09-07 21:58:53 +0800
+Processing by BalanceController#confirm_deposit as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"balance"=>"50.0"}, "commit"=>"deposit", "id"=>"18"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:40:in `set_user'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/balance_controller.rb:16:in `confirm_deposit'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "robellempajarin@gmail.com"], ["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:16:in `confirm_deposit'
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "balance" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2022-09-07 13:58:53.961819"], ["balance", "100.0"], ["id", 18]]
+  ↳ app/controllers/balance_controller.rb:16:in `confirm_deposit'
+  [1m[36mTRANSACTION (7.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/balance_controller.rb:16:in `confirm_deposit'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 23ms (ActiveRecord: 9.5ms | Allocations: 3816)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-07 21:58:53 +0800
+Processing by StocksController#index as TURBO_STREAM
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stocks/index.html.erb within layouts/application
+  [1m[36mStock Load (2.1ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/stocks/index.html.erb:28:in `each_with_index'
+  Rendered stocks/index.html.erb within layouts/application (Duration: 5929.0ms | Allocations: 7288)
+  Rendered layout layouts/application.html.erb (Duration: 5998.4ms | Allocations: 13980)
+Completed 200 OK in 7223ms (Views: 5997.9ms | ActiveRecord: 2.4ms | Allocations: 16851)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-07 22:14:44 +0800
+Processing by StocksController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stocks/index.html.erb within layouts/application
+  [1m[36mStock Load (1.8ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/stocks/index.html.erb:28:in `each_with_index'
+  Rendered stocks/index.html.erb within layouts/application (Duration: 6095.4ms | Allocations: 8619)
+  Rendered layout layouts/application.html.erb (Duration: 6192.6ms | Allocations: 29243)
+Completed 200 OK in 7887ms (Views: 6194.2ms | ActiveRecord: 8.8ms | Allocations: 42367)
+
+
+Started GET "/balance/18" for 127.0.0.1 at 2022-09-07 22:19:30 +0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BalanceController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:40:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering balance/show.html.erb within layouts/application
+  Rendered balance/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 570)
+  Rendered layout layouts/application.html.erb (Duration: 142.3ms | Allocations: 59379)
+Completed 200 OK in 206ms (Views: 146.1ms | ActiveRecord: 7.7ms | Allocations: 80212)
+
+
+Started GET "/balance/18/withdraw" for 127.0.0.1 at 2022-09-07 22:19:32 +0800
+Processing by BalanceController#withdraw as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:40:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering balance/withdraw.html.erb within layouts/application
+  Rendered balance/withdraw.html.erb within layouts/application (Duration: 22.6ms | Allocations: 3385)
+  Rendered layout layouts/application.html.erb (Duration: 34.9ms | Allocations: 10062)
+Completed 200 OK in 53ms (Views: 35.9ms | ActiveRecord: 1.7ms | Allocations: 11398)
+
+
+Started PATCH "/balance/18/confirm_withdrawal" for 127.0.0.1 at 2022-09-07 22:19:36 +0800
+Processing by BalanceController#confirm_withdrawal as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"balance"=>"100.0"}, "commit"=>"withdraw", "id"=>"18"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:40:in `set_user'
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.7ms | Allocations: 4633)
+
+
+  
+NameError (undefined local variable or method `withdrawal_balance_path' for #<BalanceController:0x0000000000e2e0>
+Did you mean?  withdraw_balance_path
+               withdraw_balance_url):
+  
+app/controllers/balance_controller.rb:29:in `confirm_withdrawal'
+Started GET "/balance/18/withdraw" for 127.0.0.1 at 2022-09-07 22:20:30 +0800
+Processing by BalanceController#withdraw as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:40:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering balance/withdraw.html.erb within layouts/application
+  Rendered balance/withdraw.html.erb within layouts/application (Duration: 4.6ms | Allocations: 992)
+  Rendered layout layouts/application.html.erb (Duration: 36.4ms | Allocations: 22151)
+Completed 200 OK in 66ms (Views: 38.7ms | ActiveRecord: 5.5ms | Allocations: 31093)
+
+
+Started PATCH "/balance/18/confirm_withdrawal" for 127.0.0.1 at 2022-09-07 22:20:34 +0800
+Processing by BalanceController#confirm_withdrawal as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"balance"=>"25"}, "commit"=>"withdraw", "id"=>"18"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:40:in `set_user'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/balance_controller.rb:24:in `confirm_withdrawal'
+  [1m[36mUser Exists? (4.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "robellempajarin@gmail.com"], ["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:24:in `confirm_withdrawal'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/balance_controller.rb:24:in `confirm_withdrawal'
+Redirected to http://127.0.0.1:3000/stocks
+Completed 302 Found in 21ms (ActiveRecord: 7.3ms | Allocations: 4124)
+
+
+Started GET "/stocks" for 127.0.0.1 at 2022-09-07 22:20:34 +0800
+Processing by StocksController#index as TURBO_STREAM
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stocks/index.html.erb within layouts/application
+  [1m[36mStock Load (4.7ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/stocks/index.html.erb:28:in `each_with_index'
+  Rendered stocks/index.html.erb within layouts/application (Duration: 6395.6ms | Allocations: 11312)
+  Rendered layout layouts/application.html.erb (Duration: 6467.7ms | Allocations: 18094)
+Completed 200 OK in 7625ms (Views: 6453.2ms | ActiveRecord: 25.0ms | Allocations: 23014)
+
+
+Started GET "/balance/18" for 127.0.0.1 at 2022-09-07 22:20:45 +0800
+Processing by BalanceController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:40:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering balance/show.html.erb within layouts/application
+  Rendered balance/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 222)
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 6915)
+Completed 200 OK in 23ms (Views: 17.9ms | ActiveRecord: 0.5ms | Allocations: 8221)
+
+
+Started GET "/balance/18/withdraw" for 127.0.0.1 at 2022-09-07 22:20:46 +0800
+Processing by BalanceController#withdraw as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:40:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering balance/withdraw.html.erb within layouts/application
+  Rendered balance/withdraw.html.erb within layouts/application (Duration: 2.9ms | Allocations: 598)
+  Rendered layout layouts/application.html.erb (Duration: 22.2ms | Allocations: 7274)
+Completed 200 OK in 32ms (Views: 24.2ms | ActiveRecord: 0.6ms | Allocations: 8522)
+
+
+Started PATCH "/balance/18/confirm_withdrawal" for 127.0.0.1 at 2022-09-07 22:20:48 +0800
+Processing by BalanceController#confirm_withdrawal as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"balance"=>"100.0"}, "commit"=>"withdraw", "id"=>"18"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:40:in `set_user'
+Redirected to http://127.0.0.1:3000/balance/18/withdraw
+Completed 302 Found in 15ms (ActiveRecord: 0.3ms | Allocations: 1262)
+
+
+Started GET "/balance/18/withdraw" for 127.0.0.1 at 2022-09-07 22:20:48 +0800
+Processing by BalanceController#withdraw as TURBO_STREAM
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:40:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering balance/withdraw.html.erb within layouts/application
+  Rendered balance/withdraw.html.erb within layouts/application (Duration: 1.7ms | Allocations: 598)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 7467)
+Completed 200 OK in 21ms (Views: 16.5ms | ActiveRecord: 0.4ms | Allocations: 8739)
+
+
+Started PATCH "/balance/18/confirm_withdrawal" for 127.0.0.1 at 2022-09-07 22:20:51 +0800
+Processing by BalanceController#confirm_withdrawal as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"balance"=>"100.0"}, "commit"=>"withdraw", "id"=>"18"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:40:in `set_user'
+Redirected to http://127.0.0.1:3000/balance/18/withdraw
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms | Allocations: 1219)
+
+
+Started GET "/balance/18/withdraw" for 127.0.0.1 at 2022-09-07 22:20:51 +0800
+Processing by BalanceController#withdraw as TURBO_STREAM
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:40:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering balance/withdraw.html.erb within layouts/application
+  Rendered balance/withdraw.html.erb within layouts/application (Duration: 1.4ms | Allocations: 598)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 7316)
+Completed 200 OK in 20ms (Views: 16.1ms | ActiveRecord: 0.4ms | Allocations: 8574)
+
+
+Started PATCH "/balance/18/confirm_withdrawal" for 127.0.0.1 at 2022-09-07 22:20:53 +0800
+Processing by BalanceController#confirm_withdrawal as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"balance"=>"100.0"}, "commit"=>"withdraw", "id"=>"18"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:40:in `set_user'
+Redirected to http://127.0.0.1:3000/balance/18/withdraw
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms | Allocations: 1214)
+
+
+Started GET "/balance/18/withdraw" for 127.0.0.1 at 2022-09-07 22:20:53 +0800
+Processing by BalanceController#withdraw as TURBO_STREAM
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:40:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering balance/withdraw.html.erb within layouts/application
+  Rendered balance/withdraw.html.erb within layouts/application (Duration: 1.4ms | Allocations: 598)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 7427)
+Completed 200 OK in 20ms (Views: 15.6ms | ActiveRecord: 0.3ms | Allocations: 8691)
+
+
+Started PATCH "/balance/18/confirm_withdrawal" for 127.0.0.1 at 2022-09-07 22:20:53 +0800
+Processing by BalanceController#confirm_withdrawal as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"balance"=>"100.0"}, "commit"=>"withdraw", "id"=>"18"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:40:in `set_user'
+Redirected to http://127.0.0.1:3000/balance/18/withdraw
+Completed 302 Found in 16ms (ActiveRecord: 1.1ms | Allocations: 1222)
+
+
+Started GET "/balance/18/withdraw" for 127.0.0.1 at 2022-09-07 22:20:53 +0800
+Processing by BalanceController#withdraw as TURBO_STREAM
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:40:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering balance/withdraw.html.erb within layouts/application
+  Rendered balance/withdraw.html.erb within layouts/application (Duration: 1.6ms | Allocations: 598)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 7277)
+Completed 200 OK in 21ms (Views: 15.1ms | ActiveRecord: 0.4ms | Allocations: 8546)
+
+
+Started PATCH "/balance/18/confirm_withdrawal" for 127.0.0.1 at 2022-09-07 22:21:00 +0800
+Processing by BalanceController#confirm_withdrawal as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"balance"=>"99.0"}, "commit"=>"withdraw", "id"=>"18"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:40:in `set_user'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/balance_controller.rb:24:in `confirm_withdrawal'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "robellempajarin@gmail.com"], ["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:24:in `confirm_withdrawal'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/balance_controller.rb:24:in `confirm_withdrawal'
+Redirected to http://127.0.0.1:3000/stocks
+Completed 302 Found in 16ms (ActiveRecord: 1.7ms | Allocations: 3204)
+
+
+Started GET "/stocks" for 127.0.0.1 at 2022-09-07 22:21:00 +0800
+Processing by StocksController#index as TURBO_STREAM
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stocks/index.html.erb within layouts/application
+  [1m[36mStock Load (2.2ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/stocks/index.html.erb:28:in `each_with_index'
+  Rendered stocks/index.html.erb within layouts/application (Duration: 6201.2ms | Allocations: 7302)
+  Rendered layout layouts/application.html.erb (Duration: 6264.9ms | Allocations: 13994)
+Completed 200 OK in 7461ms (Views: 6266.5ms | ActiveRecord: 2.5ms | Allocations: 16857)
+
+
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/balance/18" for 127.0.0.1 at 2022-09-07 22:23:47 +0800
+Processing by BalanceController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:40:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering balance/show.html.erb within layouts/application
+  Rendered balance/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 90)
+  Rendered layout layouts/application.html.erb (Duration: 63.0ms | Allocations: 6783)
+Completed 200 OK in 72ms (Views: 63.7ms | ActiveRecord: 0.5ms | Allocations: 8027)
+
+
+Started GET "/balance/18/deposit" for 127.0.0.1 at 2022-09-07 22:23:48 +0800
+Processing by BalanceController#deposit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:40:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering balance/deposit.html.erb within layouts/application
+  Rendered balance/deposit.html.erb within layouts/application (Duration: 4.9ms | Allocations: 958)
+  Rendered layout layouts/application.html.erb (Duration: 42.2ms | Allocations: 7650)
+Completed 200 OK in 49ms (Views: 42.9ms | ActiveRecord: 0.4ms | Allocations: 8955)
+
+
+Started PATCH "/balance/18/confirm_deposit" for 127.0.0.1 at 2022-09-07 22:23:52 +0800
+Processing by BalanceController#confirm_deposit as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"balance"=>"100.0"}, "commit"=>"deposit", "id"=>"18"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:40:in `set_user'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/balance_controller.rb:16:in `confirm_deposit'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "robellempajarin@gmail.com"], ["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:16:in `confirm_deposit'
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "balance" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2022-09-07 14:23:52.136882"], ["balance", "200.0"], ["id", 18]]
+  ↳ app/controllers/balance_controller.rb:16:in `confirm_deposit'
+  [1m[36mTRANSACTION (5.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/balance_controller.rb:16:in `confirm_deposit'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 20ms (ActiveRecord: 7.2ms | Allocations: 4481)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-07 22:23:52 +0800
+Processing by StocksController#index as TURBO_STREAM
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stocks/index.html.erb within layouts/application
+  [1m[36mStock Load (2.3ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/stocks/index.html.erb:28:in `each_with_index'
+  Rendered stocks/index.html.erb within layouts/application (Duration: 6131.6ms | Allocations: 7288)
+  Rendered layout layouts/application.html.erb (Duration: 6190.7ms | Allocations: 14172)
+Completed 200 OK in 7715ms (Views: 6196.1ms | ActiveRecord: 2.6ms | Allocations: 17033)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-07 22:26:04 +0800
+Processing by StocksController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stocks/index.html.erb within layouts/application
+  [1m[36mStock Load (0.6ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/stocks/index.html.erb:28:in `each_with_index'
+  Rendered stocks/index.html.erb within layouts/application (Duration: 6258.7ms | Allocations: 8819)
+  Rendered layout layouts/application.html.erb (Duration: 6325.2ms | Allocations: 29387)
+Completed 200 OK in 7453ms (Views: 6321.5ms | ActiveRecord: 9.4ms | Allocations: 40023)
+
+
+Started GET "/balance/18" for 127.0.0.1 at 2022-09-07 22:29:51 +0800
+Processing by BalanceController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:40:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering balance/show.html.erb within layouts/application
+  Rendered balance/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 115)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 6985)
+Completed 200 OK in 19ms (Views: 15.4ms | ActiveRecord: 0.3ms | Allocations: 8741)
+
+
+Started GET "/balance/18/withdraw" for 127.0.0.1 at 2022-09-07 22:29:52 +0800
+Processing by BalanceController#withdraw as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:40:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering balance/withdraw.html.erb within layouts/application
+  Rendered balance/withdraw.html.erb within layouts/application (Duration: 3.8ms | Allocations: 645)
+  Rendered layout layouts/application.html.erb (Duration: 19.3ms | Allocations: 7322)
+Completed 200 OK in 28ms (Views: 22.0ms | ActiveRecord: 0.5ms | Allocations: 8573)
+
+
+Started PATCH "/balance/18/confirm_withdrawal" for 127.0.0.1 at 2022-09-07 22:29:57 +0800
+Processing by BalanceController#confirm_withdrawal as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"balance"=>"100.0"}, "commit"=>"withdraw", "id"=>"18"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:40:in `set_user'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/balance_controller.rb:24:in `confirm_withdrawal'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "robellempajarin@gmail.com"], ["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:24:in `confirm_withdrawal'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/balance_controller.rb:24:in `confirm_withdrawal'
+Redirected to http://127.0.0.1:3000/stocks
+Completed 302 Found in 18ms (ActiveRecord: 2.0ms | Allocations: 3720)
+
+
+Started GET "/stocks" for 127.0.0.1 at 2022-09-07 22:29:57 +0800
+Processing by StocksController#index as TURBO_STREAM
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stocks/index.html.erb within layouts/application
+  [1m[36mStock Load (1.9ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/stocks/index.html.erb:28:in `each_with_index'
+  Rendered stocks/index.html.erb within layouts/application (Duration: 6671.9ms | Allocations: 7304)
+  Rendered layout layouts/application.html.erb (Duration: 6729.2ms | Allocations: 14186)
+Completed 200 OK in 8146ms (Views: 6731.8ms | ActiveRecord: 2.2ms | Allocations: 17044)
+
+
+Started GET "/stocks" for 127.0.0.1 at 2022-09-07 22:32:00 +0800
+Processing by StocksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stocks/index.html.erb within layouts/application
+  [1m[36mStock Load (1.5ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/stocks/index.html.erb:28:in `each_with_index'
+  Rendered stocks/index.html.erb within layouts/application (Duration: 5840.6ms | Allocations: 8843)
+  Rendered layout layouts/application.html.erb (Duration: 5925.9ms | Allocations: 29588)
+Completed 200 OK in 7050ms (Views: 5928.8ms | ActiveRecord: 11.9ms | Allocations: 40227)
+
+
+Started GET "/balance/18" for 127.0.0.1 at 2022-09-07 22:32:20 +0800
+Processing by BalanceController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:44:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering balance/show.html.erb within layouts/application
+  Rendered balance/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 115)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 6999)
+Completed 200 OK in 19ms (Views: 14.8ms | ActiveRecord: 0.3ms | Allocations: 8761)
+
+
+Started GET "/balance/18/withdraw" for 127.0.0.1 at 2022-09-07 22:32:21 +0800
+Processing by BalanceController#withdraw as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:44:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering balance/withdraw.html.erb within layouts/application
+  Rendered balance/withdraw.html.erb within layouts/application (Duration: 5.1ms | Allocations: 645)
+  Rendered layout layouts/application.html.erb (Duration: 30.9ms | Allocations: 7511)
+Completed 200 OK in 53ms (Views: 33.6ms | ActiveRecord: 1.5ms | Allocations: 8763)
+
+
+Started PATCH "/balance/18/confirm_withdrawal" for 127.0.0.1 at 2022-09-07 22:32:27 +0800
+Processing by BalanceController#confirm_withdrawal as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"balance"=>"100.0"}, "commit"=>"withdraw", "id"=>"18"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:44:in `set_user'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/balance_controller.rb:24:in `confirm_withdrawal'
+  [1m[36mUser Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "robellempajarin@gmail.com"], ["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/balance_controller.rb:24:in `confirm_withdrawal'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/balance_controller.rb:24:in `confirm_withdrawal'
+Redirected to http://127.0.0.1:3000/stocks
+Completed 302 Found in 32ms (ActiveRecord: 3.5ms | Allocations: 3712)
+
+
+Started GET "/stocks" for 127.0.0.1 at 2022-09-07 22:32:27 +0800
+Processing by StocksController#index as TURBO_STREAM
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stocks/index.html.erb within layouts/application
+  [1m[36mStock Load (2.2ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/stocks/index.html.erb:28:in `each_with_index'
+  Rendered stocks/index.html.erb within layouts/application (Duration: 5564.0ms | Allocations: 7289)
+  Rendered layout layouts/application.html.erb (Duration: 5623.9ms | Allocations: 13983)
+Completed 200 OK in 6558ms (Views: 5625.4ms | ActiveRecord: 2.6ms | Allocations: 16853)
+
+
+Started GET "/stocks" for 127.0.0.1 at 2022-09-07 22:53:00 +0800
+Processing by StocksController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stocks/index.html.erb within layouts/application
+  [1m[36mStock Load (3.3ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/stocks/index.html.erb:28:in `each_with_index'
+  Rendered stocks/index.html.erb within layouts/application (Duration: 5590.9ms | Allocations: 7860)
+  Rendered layout layouts/application.html.erb (Duration: 5620.0ms | Allocations: 15086)
+Completed 200 OK in 6804ms (Views: 5623.5ms | ActiveRecord: 10.4ms | Allocations: 21769)
+
+
+Started GET "/stocks/31" for 127.0.0.1 at 2022-09-07 22:59:55 +0800
+Processing by StocksController#show as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mStock Load (0.5ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks" WHERE "stocks"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/stocks_controller.rb:23:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering stocks/show.html.erb within layouts/application
+  Rendered stocks/_stock.html.erb (Duration: 1.1ms | Allocations: 334)
+  Rendered stocks/show.html.erb within layouts/application (Duration: 29.7ms | Allocations: 9479)
+  Rendered layout layouts/application.html.erb (Duration: 29.9ms | Allocations: 9557)
+Completed 500 Internal Server Error in 81ms (ActiveRecord: 8.8ms | Allocations: 15300)
+
+
+  
+ActionView::Template::Error (undefined method `edit_stock_path' for #<ActionView::Base:0x0000000001fa68>
+Did you mean?  edit_user_path):
+     6: 
+     7:     <%= render @stock %>
+     8: 
+     9:     <%= link_to 'Edit this stock', edit_stock_path(@stock), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    10:     <div class="inline-block ml-2">
+    11:       <%= button_to 'Destroy this stock', stock_path(@stock), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
+    12:     </div>
+  
+app/views/stocks/show.html.erb:9
+Started GET "/stocks" for 127.0.0.1 at 2022-09-07 22:59:57 +0800
+Processing by StocksController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stocks/index.html.erb within layouts/application
+  [1m[36mStock Load (1.8ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/stocks/index.html.erb:28:in `each_with_index'
+  Rendered stocks/index.html.erb within layouts/application (Duration: 5673.3ms | Allocations: 7291)
+  Rendered layout layouts/application.html.erb (Duration: 5703.2ms | Allocations: 14173)
+Completed 200 OK in 6597ms (Views: 5703.3ms | ActiveRecord: 2.6ms | Allocations: 17021)
+
+
+Started GET "/pending_requests" for 127.0.0.1 at 2022-09-08 01:11:26 +0800
+Processing by PendingRequestsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pending_requests/index.html.erb within layouts/application
+  Rendered pending_requests/index.html.erb within layouts/application (Duration: 18.9ms | Allocations: 4779)
+  Rendered layout layouts/application.html.erb (Duration: 19.2ms | Allocations: 4858)
+Completed 500 Internal Server Error in 69ms (ActiveRecord: 6.6ms | Allocations: 16722)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `declined_requests_path' for #<ActionView::Base:0x00000000025be8>):
+    4:   <div class="justify-content-evenly">
+    5:     <h4>Requests</h4>
+    6:     
+    7:     <%= link_to "Declined",  declined_requests_path, class:"btn btn-info position-absolute top-1 end-0 mx-4 "%>
+    8:  
+    9:   </div>
+   10:   <ul class="overflow-auto container" style="min-height: 20rem; max-height: 35rem;">
+  
+app/views/pending_requests/index.html.erb:7
+Started GET "/pending_requests" for 127.0.0.1 at 2022-09-08 01:11:42 +0800
+Processing by PendingRequestsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pending_requests/index.html.erb within layouts/application
+  [1m[36mUser Exists? (2.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."role" = $1 AND "users"."state" = $2 AND "users"."confirmed_at" IS NOT NULL LIMIT $3[0m  [["role", "trader"], ["state", "Pending"], ["LIMIT", 1]]
+  ↳ app/views/pending_requests/index.html.erb:11
+  Rendered pending_requests/index.html.erb within layouts/application (Duration: 8.0ms | Allocations: 2645)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 2724)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 3.0ms | Allocations: 5065)
+
+
+  
+ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column users.role does not exist
+LINE 1: SELECT 1 AS one FROM "users" WHERE "users"."role" = $1 AND "...
+                                           ^
+):
+     8:  
+     9:   </div>
+    10:   <ul class="overflow-auto container" style="min-height: 20rem; max-height: 35rem;">
+    11:     <% if @request.empty? %>
+    12:       <h4 class="text-center mt-5 text-secondary">There is currently no request yet.</h4>
+    13:     <% end %>
+    14:     <% @request.each do |request| %>
+  
+app/views/pending_requests/index.html.erb:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5853253310869891395)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddRoleToUser (20220907171739)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "users" ADD "role" integer DEFAULT 0[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220907171739"]]
+  [1m[36mTRANSACTION (56.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(5853253310869891395)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/pending_requests" for 127.0.0.1 at 2022-09-08 01:22:21 +0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PendingRequestsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pending_requests/index.html.erb within layouts/application
+  [1m[36mUser Exists? (15.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."role" = $1 AND "users"."state" = $2 AND "users"."confirmed_at" IS NOT NULL LIMIT $3[0m  [["role", "trader"], ["state", "Pending"], ["LIMIT", 1]]
+  ↳ app/views/pending_requests/index.html.erb:11
+  Rendered pending_requests/index.html.erb within layouts/application (Duration: 22.4ms | Allocations: 2592)
+  Rendered layout layouts/application.html.erb (Duration: 23.0ms | Allocations: 2671)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 16.3ms | Allocations: 11586)
+
+
+  
+ActionView::Template::Error (PG::InvalidTextRepresentation: ERROR:  invalid input syntax for type integer: "trader"
+CONTEXT:  unnamed portal parameter $1 = '...'
+):
+     8:  
+     9:   </div>
+    10:   <ul class="overflow-auto container" style="min-height: 20rem; max-height: 35rem;">
+    11:     <% if @request.empty? %>
+    12:       <h4 class="text-center mt-5 text-secondary">There is currently no request yet.</h4>
+    13:     <% end %>
+    14:     <% @request.each do |request| %>
+  
+app/views/pending_requests/index.html.erb:11
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5853253310869891395)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ChangeRoleToString (20220907172536)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (353.6ms)[0m  [1m[35mALTER TABLE "users" ALTER COLUMN "role" TYPE character varying, ALTER COLUMN "role" SET DEFAULT ''[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220907172536"]]
+  [1m[36mTRANSACTION (11.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(5853253310869891395)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/pending_requests" for 127.0.0.1 at 2022-09-08 01:29:52 +0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PendingRequestsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pending_requests/index.html.erb within layouts/application
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."role" = $1 AND "users"."state" = $2 AND "users"."confirmed_at" IS NOT NULL LIMIT $3[0m  [["role", "trader"], ["state", "Pending"], ["LIMIT", 1]]
+  ↳ app/views/pending_requests/index.html.erb:11
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1 AND "users"."state" = $2 AND "users"."confirmed_at" IS NOT NULL ORDER BY "users"."confirmed_at" ASC[0m  [["role", "trader"], ["state", "Pending"]]
+  ↳ app/views/pending_requests/index.html.erb:14
+  Rendered pending_requests/index.html.erb within layouts/application (Duration: 6.7ms | Allocations: 1331)
+  Rendered layout layouts/application.html.erb (Duration: 35.7ms | Allocations: 23748)
+Completed 200 OK in 52ms (Views: 36.0ms | ActiveRecord: 2.4ms | Allocations: 32368)
+
+
+Started GET "/pending_requests" for 127.0.0.1 at 2022-09-08 01:32:07 +0800
+Processing by PendingRequestsController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pending_requests/index.html.erb within layouts/application
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."role" = $1 AND "users"."state" = $2 AND "users"."confirmed_at" IS NOT NULL LIMIT $3[0m  [["role", "trader"], ["state", "Pending"], ["LIMIT", 1]]
+  ↳ app/views/pending_requests/index.html.erb:11
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1 AND "users"."state" = $2 AND "users"."confirmed_at" IS NOT NULL ORDER BY "users"."confirmed_at" ASC[0m  [["role", "trader"], ["state", "Pending"]]
+  ↳ app/views/pending_requests/index.html.erb:14
+  Rendered pending_requests/index.html.erb within layouts/application (Duration: 7.7ms | Allocations: 1466)
+  Rendered layout layouts/application.html.erb (Duration: 21.6ms | Allocations: 8724)
+Completed 200 OK in 34ms (Views: 22.8ms | ActiveRecord: 2.8ms | Allocations: 11102)
+
+
+Started GET "/users/sign_ip" for 127.0.0.1 at 2022-09-08 01:32:31 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"sign_ip"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+Completed 404 Not Found in 10ms (ActiveRecord: 0.9ms | Allocations: 2699)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=sign_ip):
+  
+app/controllers/users_controller.rb:68:in `set_user'
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-09-08 01:32:37 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 8ms (ActiveRecord: 0.5ms | Allocations: 1677)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-08 01:32:37 +0800
+Processing by StocksController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering stocks/index.html.erb within layouts/application
+  [1m[36mStock Load (1.6ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+  ↳ app/views/stocks/index.html.erb:28:in `each_with_index'
+  Rendered stocks/index.html.erb within layouts/application (Duration: 5581.0ms | Allocations: 9119)
+  Rendered layout layouts/application.html.erb (Duration: 5642.8ms | Allocations: 16092)
+Completed 200 OK in 6710ms (Views: 5651.1ms | ActiveRecord: 2.0ms | Allocations: 20001)
+
+
+Started GET "/declined_requests" for 127.0.0.1 at 2022-09-08 03:08:48 +0800
+Processing by DeclinedRequestsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering declined_requests/index.html.erb within layouts/application
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."role" = $1 AND "users"."state" = $2 AND "users"."confirmed_at" IS NOT NULL LIMIT $3[0m  [["role", "trader"], ["state", "Declined"], ["LIMIT", 1]]
+  ↳ app/views/declined_requests/index.html.erb:10
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1 AND "users"."state" = $2 AND "users"."confirmed_at" IS NOT NULL ORDER BY "users"."confirmed_at" DESC[0m  [["role", "trader"], ["state", "Declined"]]
+  ↳ app/views/declined_requests/index.html.erb:13
+  Rendered declined_requests/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 1786)
+  Rendered layout layouts/application.html.erb (Duration: 29.1ms | Allocations: 22977)
+Completed 200 OK in 79ms (Views: 30.2ms | ActiveRecord: 10.3ms | Allocations: 34834)
+
+
+Started GET "/pending_requests" for 127.0.0.1 at 2022-09-08 03:08:55 +0800
+Processing by PendingRequestsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pending_requests/index.html.erb within layouts/application
+  [1m[36mUser Exists? (2.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."role" = $1 AND "users"."state" = $2 AND "users"."confirmed_at" IS NOT NULL LIMIT $3[0m  [["role", "trader"], ["state", "Pending"], ["LIMIT", 1]]
+  ↳ app/views/pending_requests/index.html.erb:11
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1 AND "users"."state" = $2 AND "users"."confirmed_at" IS NOT NULL ORDER BY "users"."confirmed_at" ASC[0m  [["role", "trader"], ["state", "Pending"]]
+  ↳ app/views/pending_requests/index.html.erb:14
+  Rendered pending_requests/index.html.erb within layouts/application (Duration: 10.6ms | Allocations: 1467)
+  Rendered layout layouts/application.html.erb (Duration: 26.0ms | Allocations: 8290)
+Completed 200 OK in 39ms (Views: 25.3ms | ActiveRecord: 3.8ms | Allocations: 10516)
+
+
+Started GET "/pending_requests" for 127.0.0.1 at 2022-09-08 03:19:28 +0800
+Processing by PendingRequestsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pending_requests/index.html.erb within layouts/application
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."role" = $1 AND "users"."state" = $2 AND "users"."confirmed_at" IS NOT NULL LIMIT $3[0m  [["role", "trader"], ["state", "Pending"], ["LIMIT", 1]]
+  ↳ app/views/pending_requests/index.html.erb:11
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1 AND "users"."state" = $2 AND "users"."confirmed_at" IS NOT NULL ORDER BY "users"."confirmed_at" ASC[0m  [["role", "trader"], ["state", "Pending"]]
+  ↳ app/views/pending_requests/index.html.erb:14
+  Rendered pending_requests/index.html.erb within layouts/application (Duration: 7.0ms | Allocations: 1680)
+  Rendered layout layouts/application.html.erb (Duration: 30.2ms | Allocations: 22741)
+Completed 200 OK in 79ms (Views: 30.7ms | ActiveRecord: 9.4ms | Allocations: 34522)
+
+
+Started GET "/pending_requests" for 127.0.0.1 at 2022-09-08 03:21:28 +0800
+Processing by PendingRequestsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pending_requests/index.html.erb within layouts/application
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."role" = $1 AND "users"."state" = $2 AND "users"."confirmed_at" IS NOT NULL LIMIT $3[0m  [["role", "trader"], ["state", "Pending"], ["LIMIT", 1]]
+  ↳ app/views/pending_requests/index.html.erb:11
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1 AND "users"."state" = $2 AND "users"."confirmed_at" IS NOT NULL ORDER BY "users"."confirmed_at" ASC[0m  [["role", "trader"], ["state", "Pending"]]
+  ↳ app/views/pending_requests/index.html.erb:14
+  Rendered pending_requests/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1465)
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 8842)
+Completed 200 OK in 30ms (Views: 22.2ms | ActiveRecord: 1.4ms | Allocations: 11213)
+
+
+Started GET "/balance/18" for 127.0.0.1 at 2022-09-08 03:23:44 +0800
+Processing by BalanceController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering balance/show.html.erb within layouts/application
+  Rendered balance/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 247)
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 7773)
+Completed 200 OK in 24ms (Views: 17.4ms | ActiveRecord: 0.6ms | Allocations: 10148)
+
+
+Started GET "/balance/18/deposit" for 127.0.0.1 at 2022-09-08 03:23:46 +0800
+Processing by BalanceController#deposit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering balance/deposit.html.erb within layouts/application
+  Rendered balance/deposit.html.erb within layouts/application (Duration: 3.2ms | Allocations: 965)
+  Rendered layout layouts/application.html.erb (Duration: 19.5ms | Allocations: 7643)
+Completed 200 OK in 31ms (Views: 22.5ms | ActiveRecord: 0.5ms | Allocations: 9282)
+
+
+Started GET "/balance/18/withdraw" for 127.0.0.1 at 2022-09-08 03:23:49 +0800
+Processing by BalanceController#withdraw as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering balance/withdraw.html.erb within layouts/application
+  Rendered balance/withdraw.html.erb within layouts/application (Duration: 4.6ms | Allocations: 919)
+  Rendered layout layouts/application.html.erb (Duration: 21.0ms | Allocations: 7708)
+Completed 200 OK in 32ms (Views: 22.5ms | ActiveRecord: 0.8ms | Allocations: 9323)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "romel.051892@gmail.com"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "romel.051892@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (14.1ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "confirmation_token", "confirmed_at", "confirmation_sent_at", "unconfirmed_email", "admin", "state", "balance", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["created_at", "2022-09-07 19:29:02.196080"], ["updated_at", "2022-09-07 19:29:02.196080"], ["email", "romel.051892@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["confirmation_token", "[FILTERED]"], ["confirmed_at", "2022-09-07 19:29:01.887040"], ["confirmation_sent_at", nil], ["unconfirmed_email", nil], ["admin", false], ["state", "Approved"], ["balance", "0.0"], ["role", "admin"]]
+  [1m[36mTRANSACTION (11.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStock Create (0.7ms)[0m  [1m[32mINSERT INTO "stocks" ("comp_name", "stock_symbol", "comp_description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["comp_name", "Abbvie Inc"], ["stock_symbol", "ABBV"], ["comp_description", "AbbVie's mission is to discover and deliver innovative medicines that solve serious health issues today and address the medical challenges of tomorrow. The Company strives to have a remarkable impact on people's lives across several key therapeutic areas: immunology, oncology, neuroscience, eye care, virology, women's health and gastroenterology, in addition to products and services across its Allergan Aesthetics portfolio."], ["created_at", "2022-09-07 19:29:04.108682"], ["updated_at", "2022-09-07 19:29:04.108682"]]
+  [1m[36mTRANSACTION (6.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStock Create (1.5ms)[0m  [1m[32mINSERT INTO "stocks" ("comp_name", "stock_symbol", "comp_description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["comp_name", "American Express Co."], ["stock_symbol", "AXP"], ["comp_description", "American Express is a globally integrated payments company, providing customers with access to products, insights and experiences that enrich lives and build business success."], ["created_at", "2022-09-07 19:29:06.237566"], ["updated_at", "2022-09-07 19:29:06.237566"]]
+  [1m[36mTRANSACTION (17.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (6.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (2.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  [1m[36mTRANSACTION (20.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.9ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 12]]
+  [1m[36mTRANSACTION (6.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 13]]
+  [1m[36mTRANSACTION (8.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 14]]
+  [1m[36mTRANSACTION (8.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 15]]
+  [1m[36mTRANSACTION (9.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 16]]
+  [1m[36mTRANSACTION (9.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 17]]
+  [1m[36mTRANSACTION (9.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 18]]
+  [1m[36mTRANSACTION (9.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 19]]
+  [1m[36mTRANSACTION (9.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/pending_requests" for 127.0.0.1 at 2022-09-08 03:29:58 +0800
+Processing by PendingRequestsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+Completed 401 Unauthorized in 54ms (ActiveRecord: 10.5ms | Allocations: 4409)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-09-08 03:29:58 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.3ms | Allocations: 641)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 8.3ms | Allocations: 3015)
+  Rendered layout layouts/application.html.erb (Duration: 19.2ms | Allocations: 9851)
+Completed 200 OK in 24ms (Views: 21.4ms | ActiveRecord: 0.0ms | Allocations: 11801)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-09-08 03:30:22 +0800
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"romel.051892@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "romel.051892@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 9ms (ActiveRecord: 0.8ms | Allocations: 1657)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-09-08 03:30:29 +0800
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"romel.051892@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "romel.051892@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 18ms (ActiveRecord: 1.5ms | Allocations: 1425)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "romel.051892@gmail.com"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "romel.051892@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "confirmation_token", "confirmed_at", "confirmation_sent_at", "unconfirmed_email", "admin", "state", "balance", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["created_at", "2022-09-07 19:30:52.013101"], ["updated_at", "2022-09-07 19:30:52.013101"], ["email", "romel.051892@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["confirmation_token", "[FILTERED]"], ["confirmed_at", "2022-09-07 19:30:51.701496"], ["confirmation_sent_at", nil], ["unconfirmed_email", nil], ["admin", false], ["state", "Approved"], ["balance", "0.0"], ["role", "admin"]]
+  [1m[36mTRANSACTION (10.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStock Create (1.2ms)[0m  [1m[32mINSERT INTO "stocks" ("comp_name", "stock_symbol", "comp_description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["comp_name", "Abbvie Inc"], ["stock_symbol", "ABBV"], ["comp_description", "AbbVie's mission is to discover and deliver innovative medicines that solve serious health issues today and address the medical challenges of tomorrow. The Company strives to have a remarkable impact on people's lives across several key therapeutic areas: immunology, oncology, neuroscience, eye care, virology, women's health and gastroenterology, in addition to products and services across its Allergan Aesthetics portfolio."], ["created_at", "2022-09-07 19:30:54.189341"], ["updated_at", "2022-09-07 19:30:54.189341"]]
+  [1m[36mTRANSACTION (24.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStock Create (1.5ms)[0m  [1m[32mINSERT INTO "stocks" ("comp_name", "stock_symbol", "comp_description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["comp_name", "American Express Co."], ["stock_symbol", "AXP"], ["comp_description", "American Express is a globally integrated payments company, providing customers with access to products, insights and experiences that enrich lives and build business success."], ["created_at", "2022-09-07 19:30:55.931758"], ["updated_at", "2022-09-07 19:30:55.931758"]]
+  [1m[36mTRANSACTION (25.0ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-09-08 03:31:19 +0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.6ms | Allocations: 654)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 17.1ms | Allocations: 6317)
+  Rendered layout layouts/application.html.erb (Duration: 161.3ms | Allocations: 65454)
+Completed 200 OK in 222ms (Views: 167.6ms | ActiveRecord: 6.3ms | Allocations: 81806)
+
+
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-09-08 03:31:54 +0800
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"romel.051892@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "romel.051892@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (1.0ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "remember_created_at" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2022-09-07 19:31:54.656309"], ["remember_created_at", "2022-09-07 19:31:54.655465"], ["id", 20]]
+  [1m[36mTRANSACTION (13.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/pending_requests
+Completed 302 Found in 348ms (ActiveRecord: 16.6ms | Allocations: 11076)
+
+
+Started GET "/pending_requests" for 127.0.0.1 at 2022-09-08 03:31:54 +0800
+Processing by PendingRequestsController#index as TURBO_STREAM
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pending_requests/index.html.erb within layouts/application
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."role" = $1 AND "users"."state" = $2 AND "users"."confirmed_at" IS NOT NULL LIMIT $3[0m  [["role", "trader"], ["state", "Pending"], ["LIMIT", 1]]
+  ↳ app/views/pending_requests/index.html.erb:11
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1 AND "users"."state" = $2 AND "users"."confirmed_at" IS NOT NULL ORDER BY "users"."confirmed_at" ASC[0m  [["role", "trader"], ["state", "Pending"]]
+  ↳ app/views/pending_requests/index.html.erb:14
+  Rendered pending_requests/index.html.erb within layouts/application (Duration: 6.9ms | Allocations: 1733)
+  Rendered layout layouts/application.html.erb (Duration: 20.2ms | Allocations: 8781)
+Completed 200 OK in 39ms (Views: 21.7ms | ActiveRecord: 1.4ms | Allocations: 11153)
+
+
+Started GET "/pending_requests" for 127.0.0.1 at 2022-09-08 03:33:00 +0800
+Processing by PendingRequestsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pending_requests/index.html.erb within layouts/application
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."role" = $1 AND "users"."state" = $2 AND "users"."confirmed_at" IS NOT NULL LIMIT $3[0m  [["role", "trader"], ["state", "Pending"], ["LIMIT", 1]]
+  ↳ app/views/pending_requests/index.html.erb:11
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1 AND "users"."state" = $2 AND "users"."confirmed_at" IS NOT NULL ORDER BY "users"."confirmed_at" ASC[0m  [["role", "trader"], ["state", "Pending"]]
+  ↳ app/views/pending_requests/index.html.erb:14
+  Rendered pending_requests/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 1465)
+  Rendered layout layouts/application.html.erb (Duration: 33.4ms | Allocations: 13570)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 1.9ms | Allocations: 15944)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<ActionView::Base:0x0000000000f578>
+Did you mean?  super):
+    15:      <nav class="w-full h-10 bg-gray-700 flex p-2 text-white justify-between">
+    16:         <h1 class="font-extrabold">Bull&Bear</h1>
+    17:         <% if current_user %>
+    18:           <% if user.admin? %>
+    19: 
+    20:             <li class="nav-item">
+    21:               <%= link_to 'Traders', users_path %>
+  
+app/views/layouts/application.html.erb:18
+Started GET "/pending_requests" for 127.0.0.1 at 2022-09-08 03:33:17 +0800
+Processing by PendingRequestsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pending_requests/index.html.erb within layouts/application
+  [1m[36mUser Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."role" = $1 AND "users"."state" = $2 AND "users"."confirmed_at" IS NOT NULL LIMIT $3[0m  [["role", "trader"], ["state", "Pending"], ["LIMIT", 1]]
+  ↳ app/views/pending_requests/index.html.erb:11
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1 AND "users"."state" = $2 AND "users"."confirmed_at" IS NOT NULL ORDER BY "users"."confirmed_at" ASC[0m  [["role", "trader"], ["state", "Pending"]]
+  ↳ app/views/pending_requests/index.html.erb:14
+  Rendered pending_requests/index.html.erb within layouts/application (Duration: 9.0ms | Allocations: 1462)
+  Rendered layout layouts/application.html.erb (Duration: 50.3ms | Allocations: 13702)
+Completed 500 Internal Server Error in 69ms (ActiveRecord: 2.4ms | Allocations: 16077)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<ActionView::Base:0x0000000000f8e8>
+Did you mean?  super):
+    15:      <nav class="w-full h-10 bg-gray-700 flex p-2 text-white justify-between">
+    16:         <h1 class="font-extrabold">Bull&Bear</h1>
+    17:         <% if current_user %>
+    18:           <% if user.role=='admin' %>
+    19: 
+    20:             <li class="nav-item">
+    21:               <%= link_to 'Traders', users_path %>
+  
+app/views/layouts/application.html.erb:18
+Started GET "/pending_requests" for 127.0.0.1 at 2022-09-08 03:33:29 +0800
+Processing by PendingRequestsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pending_requests/index.html.erb within layouts/application
+  [1m[36mUser Exists? (2.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."role" = $1 AND "users"."state" = $2 AND "users"."confirmed_at" IS NOT NULL LIMIT $3[0m  [["role", "trader"], ["state", "Pending"], ["LIMIT", 1]]
+  ↳ app/views/pending_requests/index.html.erb:11
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1 AND "users"."state" = $2 AND "users"."confirmed_at" IS NOT NULL ORDER BY "users"."confirmed_at" ASC[0m  [["role", "trader"], ["state", "Pending"]]
+  ↳ app/views/pending_requests/index.html.erb:14
+  Rendered pending_requests/index.html.erb within layouts/application (Duration: 11.1ms | Allocations: 1462)
+  Rendered layout layouts/application.html.erb (Duration: 33.4ms | Allocations: 10160)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 4.5ms | Allocations: 12536)
+
+
+  
+ActionView::Template::Error (undefined method `role' for nil:NilClass):
+    15:      <nav class="w-full h-10 bg-gray-700 flex p-2 text-white justify-between">
+    16:         <h1 class="font-extrabold">Bull&Bear</h1>
+    17:         <% if current_user %>
+    18:           <% if @user.role=='admin' %>
+    19: 
+    20:             <li class="nav-item">
+    21:               <%= link_to 'Traders', users_path %>
+  
+app/views/layouts/application.html.erb:18
+Started GET "/pending_requests" for 127.0.0.1 at 2022-09-08 03:34:08 +0800
+Processing by PendingRequestsController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pending_requests/index.html.erb within layouts/application
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."role" = $1 AND "users"."state" = $2 AND "users"."confirmed_at" IS NOT NULL LIMIT $3[0m  [["role", "trader"], ["state", "Pending"], ["LIMIT", 1]]
+  ↳ app/views/pending_requests/index.html.erb:11
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1 AND "users"."state" = $2 AND "users"."confirmed_at" IS NOT NULL ORDER BY "users"."confirmed_at" ASC[0m  [["role", "trader"], ["state", "Pending"]]
+  ↳ app/views/pending_requests/index.html.erb:14
+  Rendered pending_requests/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 1462)
+  Rendered layout layouts/application.html.erb (Duration: 51.2ms | Allocations: 13345)
+Completed 500 Internal Server Error in 69ms (ActiveRecord: 2.3ms | Allocations: 15712)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `transactions_path' for #<ActionView::Base:0x0000000000ff50>):
+    26:             </li>
+    27: 
+    28:             <li>
+    29:               <%= link_to 'Transactions', transactions_path %>
+    30:             </li>
+    31: 
+    32:           <% else %>
+  
+app/views/layouts/application.html.erb:29
+Started GET "/pending_requests" for 127.0.0.1 at 2022-09-08 03:35:47 +0800
+Processing by PendingRequestsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pending_requests/index.html.erb within layouts/application
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."role" = $1 AND "users"."state" = $2 AND "users"."confirmed_at" IS NOT NULL LIMIT $3[0m  [["role", "trader"], ["state", "Pending"], ["LIMIT", 1]]
+  ↳ app/views/pending_requests/index.html.erb:11
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1 AND "users"."state" = $2 AND "users"."confirmed_at" IS NOT NULL ORDER BY "users"."confirmed_at" ASC[0m  [["role", "trader"], ["state", "Pending"]]
+  ↳ app/views/pending_requests/index.html.erb:14
+  Rendered pending_requests/index.html.erb within layouts/application (Duration: 8.5ms | Allocations: 1462)
+  Rendered layout layouts/application.html.erb (Duration: 29.0ms | Allocations: 8903)
+Completed 200 OK in 40ms (Views: 32.3ms | ActiveRecord: 2.2ms | Allocations: 11295)
+
+
+Started GET "/pending_requests" for 127.0.0.1 at 2022-09-08 03:36:26 +0800
+Processing by PendingRequestsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pending_requests/index.html.erb within layouts/application
+  [1m[36mUser Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."role" = $1 AND "users"."state" = $2 AND "users"."confirmed_at" IS NOT NULL LIMIT $3[0m  [["role", "trader"], ["state", "Pending"], ["LIMIT", 1]]
+  ↳ app/views/pending_requests/index.html.erb:11
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1 AND "users"."state" = $2 AND "users"."confirmed_at" IS NOT NULL ORDER BY "users"."confirmed_at" ASC[0m  [["role", "trader"], ["state", "Pending"]]
+  ↳ app/views/pending_requests/index.html.erb:14
+  Rendered pending_requests/index.html.erb within layouts/application (Duration: 12.6ms | Allocations: 1462)
+  Rendered layout layouts/application.html.erb (Duration: 31.0ms | Allocations: 8818)
+Completed 200 OK in 45ms (Views: 32.0ms | ActiveRecord: 1.9ms | Allocations: 11255)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-09-08 03:36:40 +0800
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:12
+  Rendered collection of users/_user.html.erb [1 times] (Duration: 1.5ms | Allocations: 373)
+  Rendered users/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 1516)
+  Rendered layout layouts/application.html.erb (Duration: 23.8ms | Allocations: 8256)
+Completed 200 OK in 34ms (Views: 27.1ms | ActiveRecord: 0.8ms | Allocations: 10516)
+
+
+Started GET "/pending_requests" for 127.0.0.1 at 2022-09-08 03:36:47 +0800
+Processing by PendingRequestsController#index as HTML
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pending_requests/index.html.erb within layouts/application
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."role" = $1 AND "users"."state" = $2 AND "users"."confirmed_at" IS NOT NULL LIMIT $3[0m  [["role", "trader"], ["state", "Pending"], ["LIMIT", 1]]
+  ↳ app/views/pending_requests/index.html.erb:11
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1 AND "users"."state" = $2 AND "users"."confirmed_at" IS NOT NULL ORDER BY "users"."confirmed_at" ASC[0m  [["role", "trader"], ["state", "Pending"]]
+  ↳ app/views/pending_requests/index.html.erb:14
+  Rendered pending_requests/index.html.erb within layouts/application (Duration: 11.6ms | Allocations: 1107)
+  Rendered layout layouts/application.html.erb (Duration: 30.0ms | Allocations: 7789)
+Completed 200 OK in 47ms (Views: 30.7ms | ActiveRecord: 4.5ms | Allocations: 9460)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-09-08 03:36:48 +0800
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:12
+  Rendered collection of users/_user.html.erb [1 times] (Duration: 0.6ms | Allocations: 119)
+  Rendered users/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 873)
+  Rendered layout layouts/application.html.erb (Duration: 23.2ms | Allocations: 7529)
+Completed 200 OK in 43ms (Views: 25.2ms | ActiveRecord: 1.4ms | Allocations: 9115)
+
+
+Started GET "/pending_requests" for 127.0.0.1 at 2022-09-08 03:36:49 +0800
+Processing by PendingRequestsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pending_requests/index.html.erb within layouts/application
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."role" = $1 AND "users"."state" = $2 AND "users"."confirmed_at" IS NOT NULL LIMIT $3[0m  [["role", "trader"], ["state", "Pending"], ["LIMIT", 1]]
+  ↳ app/views/pending_requests/index.html.erb:11
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1 AND "users"."state" = $2 AND "users"."confirmed_at" IS NOT NULL ORDER BY "users"."confirmed_at" ASC[0m  [["role", "trader"], ["state", "Pending"]]
+  ↳ app/views/pending_requests/index.html.erb:14
+  Rendered pending_requests/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 1107)
+  Rendered layout layouts/application.html.erb (Duration: 25.1ms | Allocations: 7789)
+Completed 200 OK in 35ms (Views: 24.9ms | ActiveRecord: 1.7ms | Allocations: 9452)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-09-08 03:36:50 +0800
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:12
+  Rendered collection of users/_user.html.erb [1 times] (Duration: 0.5ms | Allocations: 119)
+  Rendered users/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 873)
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 7529)
+Completed 200 OK in 25ms (Views: 18.4ms | ActiveRecord: 0.9ms | Allocations: 9111)
+
+
+Started GET "/users/20" for 127.0.0.1 at 2022-09-08 03:36:59 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (Duration: 0.9ms | Allocations: 220)
+  Rendered users/show.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1119)
+  Rendered layout layouts/application.html.erb (Duration: 23.4ms | Allocations: 7770)
+Completed 200 OK in 32ms (Views: 24.2ms | ActiveRecord: 0.8ms | Allocations: 10534)
+
+
+Started GET "/users/20" for 127.0.0.1 at 2022-09-08 03:37:02 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered users/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 7109)
+Completed 200 OK in 28ms (Views: 18.5ms | ActiveRecord: 1.0ms | Allocations: 9174)
+
+
+Started DELETE "/users/20" for 127.0.0.1 at 2022-09-08 03:37:03 +0800
+Processing by UsersController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"20"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:57:in `destroy'
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 20]]
+  ↳ app/controllers/users_controller.rb:57:in `destroy'
+  [1m[36mTRANSACTION (15.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:57:in `destroy'
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 37ms (ActiveRecord: 17.2ms | Allocations: 3516)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-09-08 03:37:03 +0800
+Processing by UsersController#index as TURBO_STREAM
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+Completed 401 Unauthorized in 7ms (ActiveRecord: 0.3ms | Allocations: 2328)
+
+
+Started DELETE "/users/20" for 127.0.0.1 at 2022-09-08 03:37:09 +0800
+Processing by UsersController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"20"}
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms | Allocations: 374)
+
+
+Started DELETE "/users/20" for 127.0.0.1 at 2022-09-08 03:37:14 +0800
+Processing by UsersController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"20"}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 382)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-09-08 03:37:17 +0800
+Processing by UsersController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 326)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-09-08 03:37:17 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 615)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 2213)
+  Rendered layout layouts/application.html.erb (Duration: 22.1ms | Allocations: 8970)
+Completed 200 OK in 30ms (Views: 28.2ms | ActiveRecord: 0.0ms | Allocations: 10329)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-09-08 03:37:25 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 150)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1283)
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 7957)
+Completed 200 OK in 20ms (Views: 17.9ms | ActiveRecord: 0.0ms | Allocations: 8684)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-09-08 03:37:40 +0800
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"romel.051892@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "romel.051892@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 13ms (ActiveRecord: 1.2ms | Allocations: 1421)
+
+
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "romel.051892@gmail.com"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "romel.051892@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "confirmation_token", "confirmed_at", "confirmation_sent_at", "unconfirmed_email", "admin", "state", "balance", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["created_at", "2022-09-07 19:38:20.206934"], ["updated_at", "2022-09-07 19:38:20.206934"], ["email", "romel.051892@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["confirmation_token", "[FILTERED]"], ["confirmed_at", "2022-09-07 19:38:19.896670"], ["confirmation_sent_at", nil], ["unconfirmed_email", nil], ["admin", false], ["state", "Approved"], ["balance", "0.0"], ["role", "admin"]]
+  [1m[36mTRANSACTION (14.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStock Create (0.6ms)[0m  [1m[32mINSERT INTO "stocks" ("comp_name", "stock_symbol", "comp_description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["comp_name", "Abbvie Inc"], ["stock_symbol", "ABBV"], ["comp_description", "AbbVie's mission is to discover and deliver innovative medicines that solve serious health issues today and address the medical challenges of tomorrow. The Company strives to have a remarkable impact on people's lives across several key therapeutic areas: immunology, oncology, neuroscience, eye care, virology, women's health and gastroenterology, in addition to products and services across its Allergan Aesthetics portfolio."], ["created_at", "2022-09-07 19:38:22.017648"], ["updated_at", "2022-09-07 19:38:22.017648"]]
+  [1m[36mTRANSACTION (12.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStock Create (0.4ms)[0m  [1m[32mINSERT INTO "stocks" ("comp_name", "stock_symbol", "comp_description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["comp_name", "American Express Co."], ["stock_symbol", "AXP"], ["comp_description", "American Express is a globally integrated payments company, providing customers with access to products, insights and experiences that enrich lives and build business success."], ["created_at", "2022-09-07 19:38:23.898640"], ["updated_at", "2022-09-07 19:38:23.898640"]]
+  [1m[36mTRANSACTION (9.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-09-08 03:38:43 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 150)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1283)
+  Rendered layout layouts/application.html.erb (Duration: 25.9ms | Allocations: 7957)
+Completed 200 OK in 30ms (Views: 27.2ms | ActiveRecord: 0.0ms | Allocations: 8686)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-09-08 03:38:46 +0800
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"romel.051892@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "romel.051892@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "remember_created_at" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2022-09-07 19:38:46.293569"], ["remember_created_at", "2022-09-07 19:38:46.293312"], ["id", 21]]
+  [1m[36mTRANSACTION (16.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 293ms (ActiveRecord: 17.3ms | Allocations: 5450)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-09-08 03:38:46 +0800
+Processing by UsersController#index as TURBO_STREAM
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:12
+  Rendered collection of users/_user.html.erb [1 times] (Duration: 0.3ms | Allocations: 119)
+  Rendered users/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 923)
+  Rendered layout layouts/application.html.erb (Duration: 41.4ms | Allocations: 7584)
+Completed 200 OK in 46ms (Views: 42.0ms | ActiveRecord: 0.6ms | Allocations: 9220)
+
+
+Started GET "/pending_requests" for 127.0.0.1 at 2022-09-08 03:38:56 +0800
+Processing by PendingRequestsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pending_requests/index.html.erb within layouts/application
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."role" = $1 AND "users"."state" = $2 AND "users"."confirmed_at" IS NOT NULL LIMIT $3[0m  [["role", "trader"], ["state", "Pending"], ["LIMIT", 1]]
+  ↳ app/views/pending_requests/index.html.erb:11
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1 AND "users"."state" = $2 AND "users"."confirmed_at" IS NOT NULL ORDER BY "users"."confirmed_at" ASC[0m  [["role", "trader"], ["state", "Pending"]]
+  ↳ app/views/pending_requests/index.html.erb:14
+  Rendered pending_requests/index.html.erb within layouts/application (Duration: 8.5ms | Allocations: 1107)
+  Rendered layout layouts/application.html.erb (Duration: 45.8ms | Allocations: 7806)
+Completed 200 OK in 59ms (Views: 45.6ms | ActiveRecord: 1.0ms | Allocations: 9481)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-09-08 03:38:57 +0800
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:12
+  Rendered collection of users/_user.html.erb [1 times] (Duration: 0.4ms | Allocations: 119)
+  Rendered users/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 873)
+  Rendered layout layouts/application.html.erb (Duration: 20.9ms | Allocations: 7540)
+Completed 200 OK in 30ms (Views: 21.6ms | ActiveRecord: 1.3ms | Allocations: 9121)
+
+
+Started GET "/pending_requests" for 127.0.0.1 at 2022-09-08 03:38:58 +0800
+Processing by PendingRequestsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pending_requests/index.html.erb within layouts/application
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."role" = $1 AND "users"."state" = $2 AND "users"."confirmed_at" IS NOT NULL LIMIT $3[0m  [["role", "trader"], ["state", "Pending"], ["LIMIT", 1]]
+  ↳ app/views/pending_requests/index.html.erb:11
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1 AND "users"."state" = $2 AND "users"."confirmed_at" IS NOT NULL ORDER BY "users"."confirmed_at" ASC[0m  [["role", "trader"], ["state", "Pending"]]
+  ↳ app/views/pending_requests/index.html.erb:14
+  Rendered pending_requests/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1107)
+  Rendered layout layouts/application.html.erb (Duration: 21.5ms | Allocations: 7793)
+Completed 200 OK in 29ms (Views: 21.4ms | ActiveRecord: 1.3ms | Allocations: 9454)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-09-08 03:38:59 +0800
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:12
+  Rendered collection of users/_user.html.erb [1 times] (Duration: 0.6ms | Allocations: 119)
+  Rendered users/index.html.erb within layouts/application (Duration: 8.9ms | Allocations: 873)
+  Rendered layout layouts/application.html.erb (Duration: 23.7ms | Allocations: 7529)
+Completed 200 OK in 38ms (Views: 20.5ms | ActiveRecord: 5.1ms | Allocations: 9127)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-09-08 03:41:57 +0800
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", "trader"]]
+  ↳ app/views/users/index.html.erb:12
+  Rendered collection of templates [0 times] (Duration: 0.1ms | Allocations: 20)
+  Rendered users/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 772)
+  Rendered layout layouts/application.html.erb (Duration: 32.5ms | Allocations: 21312)
+Completed 200 OK in 54ms (Views: 34.5ms | ActiveRecord: 4.7ms | Allocations: 30543)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-09-08 03:44:03 +0800
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", "trader"]]
+  ↳ app/views/users/index.html.erb:12
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 13)
+  Rendered users/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 974)
+  Rendered layout layouts/application.html.erb (Duration: 26.5ms | Allocations: 22082)
+Completed 200 OK in 50ms (Views: 27.6ms | ActiveRecord: 5.6ms | Allocations: 31594)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-09-08 03:44:10 +0800
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", "trader"]]
+  ↳ app/views/users/index.html.erb:12
+  Rendered collection of templates [0 times] (Duration: 0.1ms | Allocations: 11)
+  Rendered users/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 961)
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 8317)
+Completed 200 OK in 29ms (Views: 20.6ms | ActiveRecord: 1.1ms | Allocations: 10662)
+
+
+Started GET "/pending_requests" for 127.0.0.1 at 2022-09-08 03:44:14 +0800
+Processing by PendingRequestsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pending_requests/index.html.erb within layouts/application
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."role" = $1 AND "users"."state" = $2 AND "users"."confirmed_at" IS NOT NULL LIMIT $3[0m  [["role", "trader"], ["state", "Pending"], ["LIMIT", 1]]
+  ↳ app/views/pending_requests/index.html.erb:11
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1 AND "users"."state" = $2 AND "users"."confirmed_at" IS NOT NULL ORDER BY "users"."confirmed_at" ASC[0m  [["role", "trader"], ["state", "Pending"]]
+  ↳ app/views/pending_requests/index.html.erb:14
+  Rendered pending_requests/index.html.erb within layouts/application (Duration: 10.3ms | Allocations: 1654)
+  Rendered layout layouts/application.html.erb (Duration: 21.2ms | Allocations: 8490)
+Completed 200 OK in 29ms (Views: 22.0ms | ActiveRecord: 1.7ms | Allocations: 10801)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-09-08 03:44:15 +0800
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", "trader"]]
+  ↳ app/views/users/index.html.erb:12
+  Rendered collection of templates [0 times] (Duration: 0.1ms | Allocations: 11)
+  Rendered users/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 726)
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 7428)
+Completed 200 OK in 26ms (Views: 19.0ms | ActiveRecord: 1.0ms | Allocations: 9041)
+
+
+Started GET "/pending_requests" for 127.0.0.1 at 2022-09-08 03:44:16 +0800
+Processing by PendingRequestsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pending_requests/index.html.erb within layouts/application
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."role" = $1 AND "users"."state" = $2 AND "users"."confirmed_at" IS NOT NULL LIMIT $3[0m  [["role", "trader"], ["state", "Pending"], ["LIMIT", 1]]
+  ↳ app/views/pending_requests/index.html.erb:11
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1 AND "users"."state" = $2 AND "users"."confirmed_at" IS NOT NULL ORDER BY "users"."confirmed_at" ASC[0m  [["role", "trader"], ["state", "Pending"]]
+  ↳ app/views/pending_requests/index.html.erb:14
+  Rendered pending_requests/index.html.erb within layouts/application (Duration: 6.9ms | Allocations: 1110)
+  Rendered layout layouts/application.html.erb (Duration: 23.4ms | Allocations: 7838)
+Completed 200 OK in 31ms (Views: 23.1ms | ActiveRecord: 1.7ms | Allocations: 9521)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-09-08 03:44:17 +0800
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", "trader"]]
+  ↳ app/views/users/index.html.erb:12
+  Rendered collection of templates [0 times] (Duration: 0.1ms | Allocations: 11)
+  Rendered users/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 726)
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | Allocations: 7428)
+Completed 200 OK in 29ms (Views: 20.1ms | ActiveRecord: 0.9ms | Allocations: 9043)
+
+
+Started GET "/pending_requests" for 127.0.0.1 at 2022-09-08 03:44:18 +0800
+Processing by PendingRequestsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pending_requests/index.html.erb within layouts/application
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."role" = $1 AND "users"."state" = $2 AND "users"."confirmed_at" IS NOT NULL LIMIT $3[0m  [["role", "trader"], ["state", "Pending"], ["LIMIT", 1]]
+  ↳ app/views/pending_requests/index.html.erb:11
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1 AND "users"."state" = $2 AND "users"."confirmed_at" IS NOT NULL ORDER BY "users"."confirmed_at" ASC[0m  [["role", "trader"], ["state", "Pending"]]
+  ↳ app/views/pending_requests/index.html.erb:14
+  Rendered pending_requests/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 1107)
+  Rendered layout layouts/application.html.erb (Duration: 18.8ms | Allocations: 7835)
+Completed 200 OK in 26ms (Views: 18.6ms | ActiveRecord: 1.5ms | Allocations: 9508)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-09-08 03:44:19 +0800
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", "trader"]]
+  ↳ app/views/users/index.html.erb:12
+  Rendered collection of templates [0 times] (Duration: 0.1ms | Allocations: 11)
+  Rendered users/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 726)
+  Rendered layout layouts/application.html.erb (Duration: 18.5ms | Allocations: 7428)
+Completed 200 OK in 27ms (Views: 19.0ms | ActiveRecord: 1.8ms | Allocations: 9049)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-09-08 03:44:46 +0800
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", "trader"]]
+  ↳ app/views/users/index.html.erb:12
+  Rendered collection of templates [0 times] (Duration: 0.1ms | Allocations: 11)
+  Rendered users/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 726)
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 7428)
+Completed 200 OK in 35ms (Views: 18.5ms | ActiveRecord: 1.6ms | Allocations: 9049)
+
+
+Started GET "/pending_requests" for 127.0.0.1 at 2022-09-08 03:44:48 +0800
+Processing by PendingRequestsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pending_requests/index.html.erb within layouts/application
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."role" = $1 AND "users"."state" = $2 AND "users"."confirmed_at" IS NOT NULL LIMIT $3[0m  [["role", "trader"], ["state", "Pending"], ["LIMIT", 1]]
+  ↳ app/views/pending_requests/index.html.erb:11
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1 AND "users"."state" = $2 AND "users"."confirmed_at" IS NOT NULL ORDER BY "users"."confirmed_at" ASC[0m  [["role", "trader"], ["state", "Pending"]]
+  ↳ app/views/pending_requests/index.html.erb:14
+  Rendered pending_requests/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1107)
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 7835)
+Completed 200 OK in 24ms (Views: 15.7ms | ActiveRecord: 1.3ms | Allocations: 9510)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-09-08 03:44:49 +0800
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", "trader"]]
+  ↳ app/views/users/index.html.erb:12
+  Rendered collection of templates [0 times] (Duration: 0.1ms | Allocations: 11)
+  Rendered users/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 726)
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 7428)
+Completed 200 OK in 29ms (Views: 21.9ms | ActiveRecord: 0.9ms | Allocations: 9045)
+
+
+Started GET "/pending_requests" for 127.0.0.1 at 2022-09-08 03:44:50 +0800
+Processing by PendingRequestsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pending_requests/index.html.erb within layouts/application
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."role" = $1 AND "users"."state" = $2 AND "users"."confirmed_at" IS NOT NULL LIMIT $3[0m  [["role", "trader"], ["state", "Pending"], ["LIMIT", 1]]
+  ↳ app/views/pending_requests/index.html.erb:11
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1 AND "users"."state" = $2 AND "users"."confirmed_at" IS NOT NULL ORDER BY "users"."confirmed_at" ASC[0m  [["role", "trader"], ["state", "Pending"]]
+  ↳ app/views/pending_requests/index.html.erb:14
+  Rendered pending_requests/index.html.erb within layouts/application (Duration: 7.7ms | Allocations: 1107)
+  Rendered layout layouts/application.html.erb (Duration: 23.5ms | Allocations: 7835)
+Completed 200 OK in 34ms (Views: 22.8ms | ActiveRecord: 2.2ms | Allocations: 9518)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-09-08 03:44:51 +0800
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", "trader"]]
+  ↳ app/views/users/index.html.erb:12
+  Rendered collection of templates [0 times] (Duration: 0.1ms | Allocations: 11)
+  Rendered users/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 726)
+  Rendered layout layouts/application.html.erb (Duration: 19.3ms | Allocations: 7428)
+Completed 200 OK in 28ms (Views: 19.9ms | ActiveRecord: 1.0ms | Allocations: 9057)
+
+
+Started GET "/pending_requests" for 127.0.0.1 at 2022-09-08 03:44:53 +0800
+Processing by PendingRequestsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pending_requests/index.html.erb within layouts/application
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."role" = $1 AND "users"."state" = $2 AND "users"."confirmed_at" IS NOT NULL LIMIT $3[0m  [["role", "trader"], ["state", "Pending"], ["LIMIT", 1]]
+  ↳ app/views/pending_requests/index.html.erb:11
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1 AND "users"."state" = $2 AND "users"."confirmed_at" IS NOT NULL ORDER BY "users"."confirmed_at" ASC[0m  [["role", "trader"], ["state", "Pending"]]
+  ↳ app/views/pending_requests/index.html.erb:14
+  Rendered pending_requests/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1107)
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 7835)
+Completed 200 OK in 29ms (Views: 17.4ms | ActiveRecord: 1.5ms | Allocations: 9520)
+
+

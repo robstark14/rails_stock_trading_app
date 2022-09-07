@@ -8,18 +8,19 @@
 
 
 #admin account
-# User.create(
-#     email: Rails.application.credentials.admin_email, 
-#     password: Rails.application.credentials.admin_password, 
-#     password_confirmation: Rails.application.credentials.admin_password, 
-#     state: 'Approved',
-#     role: 'admin',
-#     confirmed_at: DateTime.now
-# )
+User.create(
+    email: ENV['ADMIN_EMAIL'], 
+    password: ENV['ADMIN_PASS'], 
+    password_confirmation: ENV['ADMIN_PASS_CONFIRM'], 
+    state: 'Approved',
+    role: 'admin',
+    confirmed_at: DateTime.now
+)
 
 #seed stocks database with default values
-blue_chips_stocks = ['ABBV', 'AXP', 'BA', 'BAC', 'C', 'CAT', 'CI', 'CVX', 'DD', 'DIS', 'GE', 'GM', 'HD', 'HPQ', 'IBM', 'JNJ', 'JPM',
-     'KO', 'MCD', 'MMM', 'MRK', 'PFE', 'PG', 'T', 'VZ', 'WMT', 'XOM']
+blue_chips_stocks = ['ABBV', 'AXP']
+    # 'BA', 'BAC', 'C', 'CAT', 'CI', 'CVX', 'DD', 'DIS', 'GE', 'GM', 'HD', 'HPQ', 'IBM', 'JNJ', 'JPM',
+    #  'KO', 'MCD', 'MMM', 'MRK', 'PFE', 'PG', 'T', 'VZ', 'WMT', 'XOM']
 
 client = IEX::Api::Client.new(
     publishable_token: "pk_b3ce259e9e674fef8588c3da61ef3bf8",
