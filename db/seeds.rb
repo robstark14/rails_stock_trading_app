@@ -23,8 +23,8 @@ blue_chips_stocks = ['ABBV', 'AXP']
     #  'KO', 'MCD', 'MMM', 'MRK', 'PFE', 'PG', 'T', 'VZ', 'WMT', 'XOM']
 
 client = IEX::Api::Client.new(
-    publishable_token: "pk_b3ce259e9e674fef8588c3da61ef3bf8",
-    secret_token: 'sk_0316d9022ff64b7fa63b2f194df3559e',
+    publishable_token: ENV['IEX_API_PUBLISHABLE_TOKEN'],
+    secret_token: ENV['IEX_API_SECRET_TOKEN'],
     endpoint: 'https://cloud.iexapis.com/v1'
 )
 
