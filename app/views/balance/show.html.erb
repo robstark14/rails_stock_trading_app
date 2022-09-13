@@ -1,2 +1,11 @@
-<%= link_to 'Deposit', deposit_balance_path(@user) %>
-<%= link_to 'Withdraw', withdraw_balance_path(@user) %>
+<div class = "w-full h-full flex flex-col items-center">
+  <div class = "w-fit mb-8">
+    <h1 class="text-4xl">Current Account Balance: </h1>
+    <h1 class="text-4xl text-center">$<%= current_user.balance%></h1>
+  </div>
+  
+  <div class = "w-fit text-center">
+    <%= link_to 'Deposit', deposit_balance_path(@user), class: "rounded p-2 m-4 bg-slate-500 text-white" %>
+    <%= link_to 'Withdraw', withdraw_balance_path(@user), class: "rounded p-2 m-4 bg-slate-500 text-white" %>
+  </div>
+</div>

@@ -13,7 +13,7 @@
 
   <body>
      <nav class="w-full h-10 bg-gray-700 flex p-2 text-white justify-between">
-        <h1 class="font-extrabold">Bull&Bear</h1>
+      <h1 class="font-extrabold">Bull&Bear</h1>
         <% if current_user %>
           <% if current_user.role == 'admin' %>
             <ul class="flex w-[50%] justify-between">
@@ -26,34 +26,30 @@
               </li>
 
               <li>
-                <%# <%= link_to 'Transactions', transactions_path %>
+                <%= link_to 'Transactions', transactions_path%>
               </li>
+              <div class="w-fit">Hi Admin, <%=current_user.email.split("@")[0]%>!</div>
             </ul>
           <% else %>
             <ul class="flex w-[70%] justify-between">
               <li>
                 <%= link_to "Balance: #{current_user.balance}", balance_path(current_user)%>
               </li>
-              <li>Home</li>
-              <li>Portfolio</li>
-              <li>Transactions</li>
+              <li><%=link_to 'Home', stocks_path%></li>
+              <li><%=link_to 'Portfolio', portfolios_path%></li>
+              <li><%=link_to 'Transactions', trader_transactions_path%></li>
+              <div class="w-fit">Hi, <%=current_user.email.split("@")[0]%>!</div>
             </ul>
           <%end%>
-            <%if current_user.role == 'admin'%>
-              <div class="w-fit">Hi Admin, <%=current_user.email.split("@")[0]%>!</div>
-            <%else%>
-              <div class="w-fit">Hi, <%=current_user.email.split("@")[0]%>!</div>
-            <%end%>
-            
+                
             <%= link_to "Logout", destroy_user_session_path, method: :delete %>
           
-
         <%else%>
           <%= link_to 'Sign up', new_user_registration_path %>
           <%= link_to 'Sign in', new_user_session_path%>
         <%end%>
      </nav>
-      <p class="notice bg-slate-300"><%= notice %></p> 
+      <p class="notice bg-slate-300 bg-white"><%= notice %></p> 
       <p class="alert bg-slate-300"><%= alert %></p> 
 
     <main class="container mx-auto mt-28 px-5">

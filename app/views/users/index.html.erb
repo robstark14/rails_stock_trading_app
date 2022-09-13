@@ -4,11 +4,25 @@
   <% end %>
 
   <div class="flex justify-between items-center">
-    <h1 class="font-bold text-4xl">Users</h1>
-    <%= link_to 'New user', new_user_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+    <h1 class="font-bold text-4xl">All Traders</h1>
+    <%= link_to 'Add New Trader', new_user_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
   </div>
 
   <div id="users" class="min-w-full">
-    <%= render @users %>
+    <ul>
+    <% @traders.each do |trader| %>
+      <li>
+          <%= link_to  trader.email, user_path(trader)%>
+          
+          <span class="ms-2 mt-2 col text-center">
+            <%=  trader.role %> 
+          </span>
+
+          <span class="ms-2 col text-center btn btn-dark border rounded-pill">
+             <%= trader.portfolios.count %> stocks
+          </span>
+      </li>
+    <% end %>
+  </ul>
   </div>
 </div>

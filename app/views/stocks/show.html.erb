@@ -1,15 +1,38 @@
-<div class="mx-auto md:w-2/3 w-full flex">
-  <div class="mx-auto">
-    <% if notice.present? %>
-      <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
-    <% end %>
-
-    <%= render @stock %>
-
-    <%= link_to 'Edit this stock', edit_stock_path(@stock), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    <div class="inline-block ml-2">
-      <%= button_to 'Destroy this stock', stock_path(@stock), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
+<div class="p-0 mx-auto mt-5 shadow mb-5 bg-body rounded">
+    <div class="bg-dark text-center" style="--bs-bg-opacity: .75;">
+        <h4 class="mt-2 fw-bold text-white text-monospace">
+            <%= @stock.stock_symbol %> 
+        </h4> 
+        <p>
+            <%= @stock.comp_name %>
+        </p>
+        <%if @stock.access_quote.change_percent_s.include? "+" %>
+            <span class="p-2 position-absolute top-0 end-0 mt-3 me-3">
+                <%= @stock.access_quote.change_percent_s %>
+            </span> 
+        <% else %>
+            <span class="p-2 position-absolute top-0 end-0 mt-3 me-3">
+                <%= @stock.access_quote.change_percent_s %>
+            </span> 
+        <% end %>
+        <div class="d-flex position-absolute bottom-0 mb-5 bg-white" style="width: 95%">
+            <p class="fw-bold mx-2">
+                $<%= @stock.access_quote.latest_price%>/ABBV
+            </p>
+            <p class="text-dark ps-3", style="--bs-text-opacity: 75;">
+                <%= Time.now.strftime(" %B %d at %I:%M %p")%>
+            </p>
+        </div>
     </div>
-    <%= link_to 'Back to stocks', stocks_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-  </div>
+    <div class="p-4 overflow-auto scroll" style="min-height: 20rem; max-height: 25rem;">
+        <p style="text-align: justify; text-indent: 50px; font-size: 18px;">
+            <%= @stock.comp_description %>
+        </p>
+    </div>
+    <div>
+
+        <%= link_to 'Buy Stock', buy_portfolio_path(:stocksymbol => @stock.stock_symbol), class: "rounded p-2 m-4 bg-green-600 text-white"%>
+        <%= link_to 'Back', stocks_path, class: "ms-3"%>
+        
+    </div>
 </div>

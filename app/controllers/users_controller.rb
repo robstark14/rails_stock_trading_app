@@ -1,9 +1,12 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: %i[ show edit update destroy ]
+
+  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :verify_if_admin, only: [:index, :edit, :show, :create, :new]
 
   # GET /users or /users.json
   def index
     @users = User.where(role: "trader")
+    @traders = @users.where(role: "trader", state: "Approved")
   end
 
   # GET /users/1 or /users/1.json
@@ -22,21 +25,14 @@ class UsersController < ApplicationController
   # POST /users or /users.json
   def create
     @user = User.new(user_params)
-    # if @user.save
-    #   redirect_to @user, notice: 'New trader was successfully created.'
-    # else
-    #   render :new
-    # end
-    respond_to do |format|
-      if @user.save
-        format.html { redirect_to user_url(@user), notice: "User was successfully created." }
-        format.json { render :show, status: :created, location: @user }
-          
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
-      end
+    @user.state = "Approved"
+    @user.skip_confirmation!
+    if @user.save
+      redirect_to @user, notice: 'New trader was has been created successfully.'
+    else
+      render :new
     end
+
   end
 
   # PATCH/PUT /users/1 or /users/1.json
@@ -54,12 +50,8 @@ class UsersController < ApplicationController
 
   # DELETE /users/1 or /users/1.json
   def destroy
-    @user.destroy
-
-    respond_to do |format|
-      format.html { redirect_to users_url, notice: "User was successfully destroyed." }
-      format.json { head :no_content }
-    end
+    @user.destroy!
+    redirect_to users_path, notice: "You successfully deleted #{@user.email}'s profile."
   end
 
   private
@@ -74,8 +66,8 @@ class UsersController < ApplicationController
       params.require(:user).permit(:email, :password, :password_confirmation)
     end
 
-    def verify_is_admin
-      if current_user.admin?
+    def verify_if_admin
+      if current_user.role == 'admin'
          return
       else
          redirect_to root_path, notice: "You must be an admin to perform this action."

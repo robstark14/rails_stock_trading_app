@@ -1,0 +1,55 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div class="mx-auto mt-5">
+
+    <div class="card-header card-title bg-dark text-light">
+        Transaction Id 
+        <%= @transaction.id %> 
+    </div>
+
+    <div class="ps-4">
+        <h5>
+            <%= User.find_by(id: @transaction.user_id).email %> 
+        </h5>
+
+        <div>
+
+            <strong>Activity:</strong>
+                <p>
+                    <% if @transaction.transaction_type == 'buy' %> 
+                    Bought
+                    <% else %>
+                    Sold
+                    <% end %>
+                    <%= @transaction.stock_symbol %> 
+                    shares
+                </p>
+            <strong>Quantity:</strong>
+                <p>
+                    <%= @transaction.order_quantity %> 
+                </p>
+            <strong>Amount:</strong>
+                <p>
+                    <%= @transaction.buying_price %> 
+                </p>
+            <strong>Total amount:</strong>
+                <p>
+                    <%= @transaction.amount %> 
+                </p>
+            <div class="flex">
+                <strong>Time:</strong>
+                    <p class="text-dark ps-2", style="--bs-text-opacity: .75;">
+                        <%=  distance_of_time_in_words_to_now(@transaction.created_at) %> ago
+                    </p>
+            </div>
+            
+                <p class="mb-5">
+                    <%=  @transaction.created_at.strftime("%A %B %d, %Y %I:%M %p") %> 
+                </p>
+            <div class="justify-content-center">
+                <%= link_to "Return to all transactions", transactions_path, class: "btn btn-primary" %>
+            </div>
+        </div>
+
+    </div>
+
+</div>

@@ -1,7 +1,101 @@
-<div id="<%= dom_id user %>">
-  <% if action_name != "show" %>
-    <%= link_to "Show this user", user, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    <%= link_to 'Edit this user', edit_user_path(user), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
-    <hr class="mt-6">
-  <% end %>
+<div class="mt-5 ">
+    <div class="mx-auto text-warning  text-dark">
+
+        <h2 class="text-left bg-info bg-opacity-25">
+            <%= user.email %>
+            <span class='bg-dark rounded-pill position-absolute top-1 end-0 mx-3'>
+                <%= user.portfolios.count %> stocks
+            </span>
+        </h2>
+        <div class="overflow-auto ps-4" style="min-height: 20rem; max-height: 35rem;">
+
+            <div class="flex">
+                <strong>
+                    Date Added:  
+                </strong>
+                <p class="ms-2">
+                    <%= user.created_at.strftime("%A %B %d, %Y") %>
+                </p>
+            </div>
+            <div class="flex">
+                <strong>
+                    Last profile update: 
+                </strong>
+                <p class="ms-2">
+                    <%= user.updated_at.strftime("%A %B %d, %Y") %>
+                </p>
+            </div>
+            <div class="flex">
+                <strong>
+                    Role:
+                </strong>
+                <p class="ms-2">
+                    <%= user.role %>
+                </p>
+            </div>
+            <div class="flex">
+                <strong>
+                    Total Transactions:
+                </strong>
+                <%= link_to  transaction_path(user) do%>
+                    <%= user.transactions.count %>
+                <% end %>   
+            </div>
+            <div class="flex">
+                <strong>
+                    Last Transaction:
+                </strong>
+                <p class="ms-2">
+                    <% if user.transactions.last %>
+                        <%= user.transactions.last.stock_symbol%>,
+                        <% if user.transactions.last.transaction_type = 'buy' %>
+                        Activity: Buy,
+                        <% else %>
+                        Activity: Sell,
+                        <% end %>
+                        <%= user.transactions.last.created_at.strftime("%A %B %d, %Y") %>
+                    <%else%>
+                        <h1>No transactions yet</h1>
+                    <% end %>
+                </p>
+            </div>
+            <div>
+                <strong>
+                    Stocks:
+                </strong>
+                <div class="ms-2">
+                    <div class = "row overflow-auto" style="min-height: 10rem; max-height: 15rem;">
+                    <%if user.portfolios.empty?%>
+                    <h1 class="inline-block">No stocks in portfolio<h1>
+                    <%else%>
+                        <% user.portfolios.each do |stock| %>
+                            
+                        <div class="my-1 mx-auto col-5">
+                
+                            <div>        
+                                <%= stock.stock_symbol %> 
+                            </div>
+                            
+                            <div class="flex ">
+                                <strong>Qty:</strong>
+                                <%= stock.quantity %>
+                            </div>  
+                            
+                            <div>
+                                <%= stock.created_at.strftime("%A %B %d, %Y")%>
+                            </div>
+                        </div>                     
+                        <% end %>
+                    <% end %>
+                    </div>
+                </div>
+            </div>             
+        </div>
+        <div>
+            <%= link_to "Edit", edit_user_path(@user), class:"mx-3" %>
+            <%= link_to "Delete",  user_path(@user), method: :delete, confirm: "Are you sure you want to delete #{user.email}'s profile?", class:"mx-3" %>
+            <%= link_to "Back", users_path, class:"mx-3" %>
+            
+        </div>
+    </div>
 </div>

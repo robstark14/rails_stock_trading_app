@@ -1,0 +1,35 @@
+<div class="mx-auto mt-4" >
+    <div class="flex justify-content-evenly bg-dark text-light">
+      <h4>My Transactions</h4>
+    </div>
+
+    <div class="overflow-auto scroll container p-1" style="min-height: 20rem; max-height: 35rem;">
+        <% if @transactions.empty? %>
+            <h4 class="text-center mt-5 text-secondary">No transaction has taken place yet.</h4>
+        <% end %>
+        <% @transactions.each do |transaction| %>
+          <li class="p-1">
+            <%= link_to transaction_path(transaction), class: "text-dark text-start ps-3 w-100"  do %>
+                <div >
+                    <div>
+                        <% if transaction.transaction_type == 'buy' %> 
+                          bought
+                        <% else %>
+                          sold
+                        <% end %>
+                        <%= transaction.order_quantity %> 
+                        <%= transaction.stock_symbol %>                      
+                        @ $<%= transaction.buying_price %>/MFT 
+                        <%=  transaction.amount %>
+                    
+                    </div>
+                    <div class="text-dark ps-3", style="--bs-text-opacity: .5;">
+                        <%=  distance_of_time_in_words_to_now(transaction.created_at) %> ago
+                        <%=  transaction.created_at.strftime("%A %B %d, %Y %I:%M %p") %>
+                    </div>
+                </div>
+                <% end %>
+            </li>
+        <% end %>                
+    </div>
+</div>

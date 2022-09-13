@@ -18,12 +18,12 @@
         <div class="p-4 p-sm-5">
 
           <div class="mb-3">
-            <%= form.label :withdraw_amount %>
+            <%= form.label :Amount %>
             <%= form.number_field :balance, step: :any, :min => 0.01, :class => "form-control" %>
           </div>
 
           <div class="d-grid mb-3 mt-4">
-            <%= form.submit "withdraw", :class => "text-uppercase fw-bold bg-slate-300 rounded p-2 hover:cursor-pointer"%>
+            <%= form.submit "withdraw", class: "rounded p-2 m-4 bg-slate-500 text-white hover:cursor-pointer"%>
           </div>
 
         </div>
